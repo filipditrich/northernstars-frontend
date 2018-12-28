@@ -1,8 +1,3 @@
-/**
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,7 +11,9 @@ import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -27,10 +24,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent
+  ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
   ],
 })
-export class AppModule {
-}
+export class AppModule { }

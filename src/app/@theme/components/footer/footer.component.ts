@@ -4,12 +4,9 @@ import { Component } from '@angular/core';
   selector: 'ngx-footer',
   styleUrls: ['./footer.component.scss'],
   template: `
-    <span class="created-by">Created with ♥ by <b><a href="https://akveo.com" target="_blank">Akveo</a></b> 2017</span>
+    <span class="created-by"><b><a href="https://northernstars.cz" target="_blank">((created_by))</a></b> ((copyright_year))</span>
     <div class="socials">
-      <a href="#" target="_blank" class="ion ion-social-github"></a>
-      <a href="#" target="_blank" class="ion ion-social-facebook"></a>
-      <a href="#" target="_blank" class="ion ion-social-twitter"></a>
-      <a href="#" target="_blank" class="ion ion-social-linkedin"></a>
+      <!--<a href="https://github.com/filipditrich/" target="_blank" class="ion ion-social-github"></a>-->
     </div>
   `,
 })

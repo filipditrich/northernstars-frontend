@@ -1,8 +1,8 @@
 /**
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
+ * @description Production Environmental Constants
  */
 export const environment = {
   production: true,
+  language: 'cs',
+  api: 'https://app.northernstars.cz',
 };

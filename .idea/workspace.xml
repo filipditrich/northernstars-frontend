@@ -2,18 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37736097-b0e7-461a-8af7-0d79ae7465de" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/config/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/config/sysinfo.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/config/translate-list.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/helpers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/helpers/sysinfo.helper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/helpers/translator.helper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/general.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/group.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/http.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/jersey.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/match.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/place.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/team.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/models/user.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/pipes/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/pipes/sysinfo.pipe.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/pipes/translate.pipe.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/components/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/components/footer/footer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/components/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/layouts/sample/sample.layout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/layouts/sample/sample.layout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/theme.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/theme.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-menu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,23 +37,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="footer.component.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/@theme/components/footer/footer.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="124" selection-start-line="6" selection-start-column="124" selection-end-line="6" selection-end-column="124" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package_json" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>idea</find>
       <find>support us</find>
+      <find>&quot;</find>
     </findStrings>
+    <replaceStrings>
+      <replace>'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,6 +77,27 @@
         <option value="$PROJECT_DIR$/src/app/pages/pages-menu.ts" />
         <option value="$PROJECT_DIR$/src/app/@theme/components/header/header.component.html" />
         <option value="$PROJECT_DIR$/src/app/@theme/components/footer/footer.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/pipes/sysinfo.pipe.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/config/sysinfo.config.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/helpers/sysinfo.helper.ts" />
+        <option value="$PROJECT_DIR$/src/environments/environment.prod.ts" />
+        <option value="$PROJECT_DIR$/src/environments/environment.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/config/translate-list.config.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/pipes/translate.pipe.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/helpers/translator.helper.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/package.json" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/place.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/team.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/group.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/jersey.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/match.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/pipes/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/helpers/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/config/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/http.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/user.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/general.model.ts" />
       </list>
     </option>
   </component>
@@ -81,18 +115,30 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-114" />
-    <option name="y" value="-878" />
-    <option name="width" value="1600" />
-    <option name="height" value="878" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="604" />
+    <option name="height" value="415" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="ngx_frontend" type="cbb8eebc:String" user="ngx_frontend" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,61 +162,15 @@
               <item name="ngx_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@theme" type="462c0819:PsiDirectoryNode" />
+              <item name="@shared" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ngx_frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="ngx_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@theme" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@theme" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@theme" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@theme" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ngx_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ngx_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@theme" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="ngx_frontend" type="cbb8eebc:String" user="ngx_frontend" />
+              <item name="@shared" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -180,9 +180,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/node_modules/tslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
@@ -207,35 +211,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545938974145</updated>
-      <workItem from="1545938977394" duration="3378000" />
+      <workItem from="1545938977394" duration="7970000" />
+      <workItem from="1546000427975" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3378000" />
+    <option name="totallyTimeSpent" value="7980000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-114" y="-878" width="1600" height="878" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="604" height="415" extended-state="0" />
     <layout>
-      <window_info anchor="bottom" id="TypeScript" weight="0.3290653" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2127929" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.02058319" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.21382843" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" order="7" weight="0.3290653" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,13 +262,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/@core/core.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -284,9 +282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -297,9 +292,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="e#1#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -321,9 +313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -345,9 +334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -355,9 +341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1267">
           <caret line="141" column="20" selection-start-line="141" selection-start-column="20" selection-end-line="141" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -413,9 +396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -423,6 +403,161 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="124" selection-start-line="6" selection-start-column="124" selection-end-line="6" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/config/sysinfo.config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/pipes/translate.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/helpers/sysinfo.helper.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/helpers/translator.helper.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/config/translate-list.config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/pipes/sysinfo.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/package.json" />
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/team.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/place.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/group.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/jersey.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/match.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-631">
+          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/pipes/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/helpers/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/config/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/http.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jasmine-spec-reporter/built/display/colors-theme.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/user.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/general.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
         </state>
       </provider>
     </entry>

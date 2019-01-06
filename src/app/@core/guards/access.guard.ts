@@ -30,23 +30,25 @@ export class AuthGuard implements CanActivate, CanActivateChild {
       const returnUrl = route.url;
       this.router.navigate(['/auth'], { queryParams: { return: returnUrl } })
         .then(() => {
-          const hasBeenLogged = localStorage.getItem('user') || false;
-          let toast: Toast;
+          if (!route.data['noToast']) {
+            const hasBeenLogged = localStorage.getItem('user') || false;
+            let toast: Toast;
 
-          if (hasBeenLogged) {
-            toast = {
-              type: 'warning',
-              title: translate('TOKEN_EXP_TITLE'),
-              body: translate('TOKEN_EXP_MSG'),
-            };
-          } else {
-            toast = {
-              type: 'error',
-              title: translate('NOT_LOGGED_TITLE'),
-              body: translate('NOT_LOGGED_MSG'),
-            };
+            if (hasBeenLogged) {
+              toast = {
+                type: 'warning',
+                title: translate('TOKEN_EXP_TITLE'),
+                body: translate('TOKEN_EXP_MSG'),
+              };
+            } else {
+              toast = {
+                type: 'error',
+                title: translate('NOT_LOGGED_TITLE'),
+                body: translate('NOT_LOGGED_MSG'),
+              };
+            }
+            this.toasterService.popAsync(toast);
           }
-          this.toasterService.popAsync(toast);
         })
         .catch(error => {
           this.errorHelper.handleGenericError(error);

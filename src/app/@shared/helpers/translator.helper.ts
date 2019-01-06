@@ -11,10 +11,10 @@ import { listTranslateList } from '../config/translate-list.config';
 export function translate(id: string, data?: any, lang?: string): string {
   const translateIdList = listTranslateList();
   let output: string;
-  let string = translateIdList[id];
-  if (!string) { console.error('[TRANSLATE] Error: id "%s" not found', id); }
+  const dict = translateIdList[id];
+  if (!dict) { console.error('[TRANSLATE] Error: id "%s" not found', id); }
   lang = !!lang ? lang : getLang();
-  string = !string ? id : !lang ? id : string[lang];
+  let string: string = !dict ? id : !lang ? id : dict[lang];
   if (!string) { output = id; } else {
     let replace = string.match(/\[(.*?)\]/g);
     if (!!data && !!replace) {

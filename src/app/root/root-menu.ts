@@ -7,4 +7,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/home',
     home: true,
   },
+  {
+    title: 'System',
+    icon: 'icon ion-bug',
+    link: '/system',
+  },
 ];

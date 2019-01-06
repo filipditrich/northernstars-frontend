@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { AuthGuard, PreventLogged } from '../@core/guards/access.guard';
+import { AuthGuard, RoleGuard } from '../@core/guards/access.guard';
+import { UserRoles } from '../@shared/models';
 import { HomeComponent } from './home/home.component';
 
 import { RootComponent } from './root.component';
@@ -13,6 +14,12 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
+      {
+        path: 'system',
+        loadChildren: 'app/root/system/system.module#SystemModule',
+        canActivate: [ AuthGuard, RoleGuard ],
+        data: { roles: [ UserRoles.Super ] },
+      },
     ],
   },
   { path: 'auth',  loadChildren: 'app/root/auth/auth.module#AuthModule' },

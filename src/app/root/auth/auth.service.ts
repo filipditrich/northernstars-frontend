@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
-import {getUrl} from '../../@shared/config';
-import {IRegisterRequest, IRegistrationRequest, IResetInput, IResetRequest, IResource} from '../../@shared/models';
-import {ILoginRequest} from '../../@shared/models/auth.model';
+import { getUrl } from '../../@shared/config';
+import { IRegisterRequest, IRegistrationRequest, IResetInput, IResetRequest, IResource } from '../../@shared/models';
+import { ILoginRequest } from '../../@shared/models';
 
 @Injectable({
   providedIn: 'root',

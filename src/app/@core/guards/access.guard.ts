@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, Router, RouterStateSnapshot } from '@angular/router';
+import { UserRoles } from '../../@shared/models';
 import { SecurityService } from '../services/security.service';
 import { Toast, ToasterService } from 'angular2-toaster';
 import { translate, ErrorHelper } from '../../@shared/helpers';
@@ -95,4 +96,45 @@ export class PreventLogged implements CanActivate, CanActivateChild {
       return true;
     }
   }
+}
+
+/**
+ * Grants access to the page only for specified roles in route data
+ */
+@Injectable()
+export class RoleGuard implements CanActivate, CanActivateChild {
+
+  constructor(private router: Router,
+              private errorHelper: ErrorHelper,
+              private toasterService: ToasterService) { }
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) { return this.resolve(route, state); }
+  canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) { return this.resolve(route, state); }
+
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    const userRoles = SecurityService.getUser().roles;
+    let allowed: UserRoles[] = [];
+    if (!Array.isArray(route.data['roles'])) {
+      allowed.push(route.data['roles']);
+    } else { allowed = route.data['roles']; }
+
+    if (userRoles && allowed.some(role => userRoles.indexOf(role) >= 0)) {
+      return true;
+    } else {
+      const redirect = SecurityService.getUser() ? '/' : '/auth';
+      this.router.navigate([ redirect ]).then(() => {
+        const toast: Toast = {
+          type: 'error',
+          title: translate('UNAUTHORIZED_TITLE'),
+          body: translate('UNAUTHORIZED_MSG'),
+        };
+        this.toasterService.popAsync(toast);
+        return false;
+      }).catch(error => {
+        this.errorHelper.handleGenericError(error);
+      });
+    }
+  }
+
 }

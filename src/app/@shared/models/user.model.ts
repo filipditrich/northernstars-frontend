@@ -8,9 +8,10 @@ export interface IUser extends IDefault {
   name: string;
   username: string;
   email: string;
-  roles: UserRoles;
+  roles: UserRoles[];
   team: ITeam | string;
   number: number;
+  token?: string;
 }
 
 /**

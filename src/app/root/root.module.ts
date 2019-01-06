@@ -1,7 +1,7 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { NbAuthModule } from '@nebular/auth';
-import { AuthGuard, PreventLogged } from '../@core/guards';
+import { AuthGuard, PreventLogged, RoleGuard } from '../@core/guards';
 import { HttpHeadersInterceptor } from '../@core/services/http–interceptor.service';
 import { SharedModule } from '../@shared/shared.module';
 import { ThemeModule } from '../@theme/theme.module';
@@ -23,6 +23,7 @@ import { RootComponent } from './root.component';
   ],
   providers: [
     AuthGuard,
+    RoleGuard,
     PreventLogged,
     { provide: HTTP_INTERCEPTORS,
       useClass: HttpHeadersInterceptor,

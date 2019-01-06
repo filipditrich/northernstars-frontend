@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient } from '@angular/common/http';
 import {IUser} from '../../@shared/models';
-import { JwtHelperService } from '@auth0/angular-jwt';
+import { JwtHelperService} from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +17,8 @@ export class SecurityService {
    * @param rememberMe
    */
   static storeUserData(user: IUser, token: string, rememberMe: boolean): void {
-    localStorage.setItem('user', JSON.stringify({ user, token }));
+    user['token'] = token;
+    localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('rememberMe', String(rememberMe));
   }
 

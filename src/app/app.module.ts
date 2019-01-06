@@ -9,10 +9,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SortablejsModule } from 'angular-sortablejs';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,9 +24,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
+    SortablejsModule.forRoot({ animation: 150 }),
   ],
   bootstrap: [
-    AppComponent
+    AppComponent,
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

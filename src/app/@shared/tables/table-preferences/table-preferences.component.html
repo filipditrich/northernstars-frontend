@@ -1,0 +1,77 @@
+<div class="modal-header">
+  <h3>{{ 'TABLE_PREF_TITLE' | translate }}</h3>
+  <button class="close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+
+  <form novalidate="" class="ng-touched ng-dirty ng-valid form" id="options-section">
+
+    <header><h5>{{ 'OPTIONS' | translate }}</h5></header>
+
+    <div class="row align-items-center">
+
+      <!-- switches -->
+      <div *ngFor="let checkbox of FOCheckbox"
+           class="pretty p-switch p-fill col-sm-6 py-2 mr-0">
+        <input
+          [id]="checkbox.id"
+          [name]="checkbox.id"
+          type="checkbox"
+          [checked]="checkbox.value"
+          (change)="checkboxOnChange(checkbox.value, checkbox.id)">
+        <div class="state">
+          <label>{{checkbox.title}}</label>
+        </div>
+      </div>
+
+      <!-- selects -->
+      <div *ngFor="let select of FOSelect"
+           class="col-sm-6 d-flex py-2 form-group group flex-column">
+        <label for="{{select.id}}" class="mr-2">{{select.title}}</label>
+        <select
+          [name]="select.id"
+          id="{{select.id}}"
+          class="input-full-width input-md ng-dirty ng-valid ng-touched"
+          (change)="selectOnSelect($event, select.id)">
+          <option
+            *ngFor="let item of select.options.items"
+            value="{{item.value}}"
+            [selected]="placeholderValue(item.value, select.id)">
+            {{item.label}}
+          </option>
+        </select>
+      </div>
+
+    </div>
+
+  </form>
+
+  <section id="columns-section">
+
+    <header><h5>{{ 'COLUMNS' | translate }}</h5></header>
+
+    <div class="row" [sortablejs]="filters" [sortablejsOptions]="sortableOptions">
+      <!-- Rows -->
+      <div class="pretty p-icon p-smooth d-flex align-items-center col-sm-12" *ngFor="let filter of filters">
+        <input
+          id="{{filter.id}}"
+          name="{{filter.id}}"
+          type="checkbox"
+          [checked]="filter.checked"
+          (click)="selectFilter(filter.id)">
+        <div class="state p-info flex-grow-1">
+          <label for="{{filter.id}}" class="position-relative">{{filter.title}}</label>
+        </div>
+        <span class="icon ion-ios-menu fs-larger"></span>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+<div class="modal-footer">
+  <button class="btn btn-md btn-secondary" (click)="closeModal()">{{ 'CANCEL' | translate }}</button>
+  <button class="btn btn-md btn-primary" (click)="applyChanges()">{{ 'APPLY_CHANGES' | translate }}</button>
+</div>

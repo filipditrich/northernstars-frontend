@@ -1,3 +1,5 @@
+import { UserRoles } from './user.model';
+
 /**
  * Response Interface
  */
@@ -14,6 +16,27 @@ export interface IResponse {
 export interface IResource {
   response: IResponse;
   output?: any | any[];
+}
+
+/**
+ * Endpoint Interface
+ */
+export interface IEndpoint {
+  id: string;
+  method: EndpointMethod;
+  params: string[];
+  roles: UserRoles[];
+  url: string;
+}
+
+/**
+ * Endpoint Method Enums
+ */
+export enum EndpointMethod {
+  Get = 'get',
+  Post = 'post',
+  Put = 'put',
+  Delete = 'delete',
 }
 
 /**

@@ -1,4 +1,4 @@
-import { listSysInfo } from '../config/sysinfo.config';
+import { listSysInfo } from '../config';
 
 /**
  * @description Returns ID specific system info

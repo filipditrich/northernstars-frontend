@@ -3,18 +3,17 @@
      [class.right]="position === 'inverse'">
   <div class="logo-containter">
     <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
-    <div class="logo" (click)="goToHome()">((text_logo))</div>
+    <div class="logo" (click)="goToHome()">Application Name</div>
   </div>
 </div>
 
 <div class="header-container">
-  <ngx-layout-direction-switcher></ngx-layout-direction-switcher>
   <nb-actions
     size="medium"
     [class.right]="position === 'normal'"
     [class.left]="position === 'inverse'">
     <nb-action *nbIsGranted="['view', 'user']" >
-      <nb-user [nbContextMenu]="userMenu" [name]="'((name))'" [title]="'((@username))'"></nb-user>
+      <nb-user [nbContextMenu]="userMenu" [name]="'Name Surname'" [title]="'@username'"></nb-user>
     </nb-action>
   </nb-actions>
 </div>

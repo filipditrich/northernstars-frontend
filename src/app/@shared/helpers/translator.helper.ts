@@ -1,5 +1,5 @@
 import { environment } from '../../../environments/environment';
-import { listTranslateList } from '../config/translate-list.config';
+import { listTranslateList } from '../config';
 
 /**
  * @description Returns translated value from matched ID

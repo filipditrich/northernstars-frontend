@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NbAuthModule } from '@nebular/auth';
 import { NbSpinnerModule } from '@nebular/theme';
 import { HttpHeadersInterceptor } from '../../@core/services/http–interceptor.service';
 import { SharedModule } from '../../@shared/shared.module';
@@ -18,6 +19,7 @@ import { AuthRouting } from './auth.routing';
     ThemeModule,
     NbSpinnerModule,
     SharedModule,
+    NbAuthModule,
   ],
   declarations: [
     AuthComponent,

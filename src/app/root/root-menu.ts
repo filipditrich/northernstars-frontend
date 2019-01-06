@@ -11,5 +11,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'System',
     icon: 'icon ion-bug',
     link: '/system',
+    children: [
+      {
+        title: 'Info',
+        link: '/system/info',
+      },
+      {
+        title: 'Dictionary',
+        link: '/system/dictionary',
+      },
+    ],
   },
 ];

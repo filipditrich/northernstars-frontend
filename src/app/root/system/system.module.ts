@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NbAuthModule } from '@nebular/auth';
 import { NbSpinnerModule } from '@nebular/theme';
+import { Ng2SmartTableExtendedModule } from 'ng2-smart-table-extended';
 import { HttpHeadersInterceptor } from '../../@core/services/http–interceptor.service';
 import { SharedModule } from '../../@shared/shared.module';
 import { ThemeModule } from '../../@theme/theme.module';
+import { DictionaryComponent } from './dictionary/dictionary.component';
 import { SystemInfoComponent } from './info/system-info.component';
 import { SystemRouting } from './system.routing';
 
@@ -19,10 +20,11 @@ import { SystemRouting } from './system.routing';
     ThemeModule,
     NbSpinnerModule,
     SharedModule,
-    NbAuthModule,
+    Ng2SmartTableExtendedModule,
   ],
   declarations: [
     SystemInfoComponent,
+    DictionaryComponent,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS,

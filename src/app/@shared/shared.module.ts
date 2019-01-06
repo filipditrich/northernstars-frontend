@@ -22,6 +22,7 @@ import { TablePreferencesComponent, EPlayersRendererComponent } from './componen
   entryComponents: [
     EPlayersRendererComponent,
     DefaultModalComponent,
+    TablePreferencesComponent,
   ],
   providers: [
     HumanizerHelper,
@@ -31,6 +32,7 @@ import { TablePreferencesComponent, EPlayersRendererComponent } from './componen
     TranslatePipe,
     SysInfoPipe,
     LocalDatePipe,
+    DefaultModalComponent,
     TablePreferencesComponent,
     EPlayersRendererComponent,
   ],

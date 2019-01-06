@@ -37,13 +37,13 @@ export class DefaultTableComponent {
   /**
    * @description Loads data
    */
-  loadData() {}
+  loadData(): void {}
 
   /**
    * @description Stores preferences from 'input' or localStore based on the 'input' presence
    * @param input
    */
-  loadPreferences(input?: any) {
+  loadPreferences(input?: any): void {
     const preferences = !!input ? input : JSON.parse(localStorage.getItem('tablePref')) ? JSON.parse(localStorage.getItem('tablePref'))[this.storagePrefName] : false;
 
     if (preferences) {
@@ -63,7 +63,7 @@ export class DefaultTableComponent {
   /**
    * @description Applies currently stored preferences
    */
-  applyPreferences() {
+  applyPreferences(): void {
     // update the settings
     const upd = this.settings;
     upd.pager.perPage = this.filterOptions.rowsPerPage.value;
@@ -114,7 +114,7 @@ export class DefaultTableComponent {
    * @description Adds Filter Column to the Table
    * @param filterId
    */
-  addFilter(filterId) {
+  addFilter(filterId): void {
     const upd = this.settings;
     const objIndex = this.filters.findIndex((obj => obj.id === filterId));
     const filter = this.filters[objIndex];
@@ -132,7 +132,7 @@ export class DefaultTableComponent {
    * @description Removes Filter Column from the Table
    * @param filterId
    */
-  removeFilter(filterId) {
+  removeFilter(filterId): void {
     const upd = this.settings;
     const objIndex = this.filters.findIndex((obj => obj.id === filterId));
     const filter = this.filters[objIndex];
@@ -144,7 +144,7 @@ export class DefaultTableComponent {
   /**
    * @description Opens columnPreferences modal window
    */
-  openPreferences() {
+  openPreferences(): void {
     // create the modal instance
     const modal = this.modalService.open(TablePreferencesComponent, {
       container: 'nb-layout',
@@ -171,7 +171,7 @@ export class DefaultTableComponent {
   /**
    * @description Applies default filter columns
    */
-  applyDefaults() {
+  applyDefaults(): void {
     this.filters.filter(filter => filter.default).forEach(filter => {
       this.addFilter(filter.id);
     });

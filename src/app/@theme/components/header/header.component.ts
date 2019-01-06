@@ -4,9 +4,11 @@ import { Router } from '@angular/router';
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
 import { filter } from 'rxjs/operators';
 import { UserService } from '../../../@core/data/users.service';
+import { SecurityService } from '../../../@core/services/security.service';
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 import { LayoutService } from '../../../@core/data/layout.service';
 import { translate } from '../../../@shared/helpers';
+import { IUser } from '../../../@shared/models';
 
 @Component({
   selector: 'ngx-header',
@@ -17,7 +19,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() position = 'normal';
 
-  user: any;
+  public user: IUser;
 
   userMenu = [
     { title: translate('LOG_OUT') },
@@ -42,8 +44,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userService.getUsers()
-      .subscribe((users: any) => this.user = users.nick);
+    this.user = SecurityService.getUser();
   }
 
   toggleSidebar(): boolean {

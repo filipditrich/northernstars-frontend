@@ -1,6 +1,7 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { NbAuthModule } from '@nebular/auth';
+import { Ng2SmartTableExtendedModule } from 'ng2-smart-table-extended';
 import { AuthGuard, PreventLogged, RoleGuard } from '../@core/guards';
 import { HttpHeadersInterceptor } from '../@core/services/http–interceptor.service';
 import { SharedModule } from '../@shared/shared.module';
@@ -16,6 +17,7 @@ import { RootComponent } from './root.component';
     ThemeModule,
     SharedModule,
     NbAuthModule,
+    Ng2SmartTableExtendedModule,
   ],
   declarations: [
     RootComponent,

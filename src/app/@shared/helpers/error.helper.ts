@@ -16,7 +16,7 @@ export class ErrorHelper {
    * @description Handler for when the request has returned a error response
    * @param err
    */
-  handleGenericError(err) {
+  handleGenericError(err): void {
     const error = !!err.error ? !!err.error.response ? err.error.response : err.error : err;
 
     if (err.status === 0) {
@@ -67,7 +67,7 @@ export class ErrorHelper {
    * @description Handler for when the request has been processed but returned a unsuccessful response
    * @param response
    */
-  processedButFailed(response) {
+  processedButFailed(response): void {
     this.toasterService.popAsync('error', !!response.response.name ? response.response.name : translate('ERROR'), !!response.response.message ? response.response.message : translate('PROCESSED_BUT_FAILED') );
   }
 

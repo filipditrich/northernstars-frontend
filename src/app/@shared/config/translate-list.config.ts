@@ -1,7 +1,9 @@
+import { ITranslateList } from '../models/config.model';
+
 /**
  * @description Translation list
  */
-let translateIdList = {
+let translateIdList: ITranslateList = {
   ADMIN: { cs: 'Administrátor', en: 'Administrator' },
   MATCHES: { cs: 'Zápasy', en: 'Matches' },
   MATCH_RESULTS: { cs: 'Výsledky', en: 'Match results' },
@@ -32,6 +34,6 @@ export function updateTranslateList(update: any, replaceAll: boolean = true): vo
  * @description Lists the whole Translation list
  * @return {any}
  */
-export function listTranslateList(): any {
+export function listTranslateList(): ITranslateList {
   return translateIdList;
 }

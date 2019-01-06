@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'ngx-footer',
   styleUrls: ['./footer.component.scss'],
   template: `
-    <span class="created-by">{{ 'copyright' | sysinfo }} <b><a href="{{ 'appCreatorUrl' | sysinfo }}" target="_blank">{{ 'appCreatorName' | sysinfo }}</a></b></span>
-    <div class="socials">
-      <!--<a href="https://github.com/filipditrich/" target="_blank" class="ion ion-social-github"></a>-->
+    <div class="w-100 d-flex flex-wrap justify-content-between">
+      <span>{{ 'copyright' | sysinfo }} <a href="{{ 'appCreatorUrl' | sysinfo }}" class="link">{{ 'appOwnerName' | sysinfo }}</a></span>
+      <span>by <a href="{{ 'appCreatorUrl' | sysinfo }}" class="link">{{ 'appCreatorName' | sysinfo }}</a></span>
     </div>
   `,
 })

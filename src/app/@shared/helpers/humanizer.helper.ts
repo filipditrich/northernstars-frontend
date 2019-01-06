@@ -14,7 +14,7 @@ export class HumanizerHelper {
    * @param date
    * @return {string}
    */
-  date(date) {
+  date(date): string {
     if (!moment(new Date(date)).isValid()) {
       date = moment(new Date(date), getLang()).locale('en');
     }

@@ -7,7 +7,7 @@ import * as moment from 'moment';
 })
 export class LocalDatePipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(any: any, args?: any): any {
     return !!value ? moment(new Date(value)).locale(getLang()).format('lll') : translate('NOT_AVAILABLE');
   }
 

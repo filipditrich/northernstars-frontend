@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NbMenuItem } from '@nebular/theme';
 
 import { MENU_ITEMS } from './root-menu';
 
@@ -13,5 +14,5 @@ import { MENU_ITEMS } from './root-menu';
   `,
 })
 export class RootComponent {
-  public menu = MENU_ITEMS;
+  public menu: NbMenuItem[] = MENU_ITEMS;
 }

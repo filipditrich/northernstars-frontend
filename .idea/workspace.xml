@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37736097-b0e7-461a-8af7-0d79ae7465de" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/@shared/config/code.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/@shared/config/endpoint.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/@shared/helpers/error.helper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/@shared/helpers/general.helper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/@shared/helpers/humanizer.helper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/@shared/helpers/validator.helper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/@shared/pipes/local-date.pipe.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/@shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@shared/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/config/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@shared/helpers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/helpers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@shared/helpers/sysinfo.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/helpers/sysinfo.helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@shared/helpers/translator.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/helpers/translator.helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@shared/models/http.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/models/http.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@shared/models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/models/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@shared/pipes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/pipes/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/components/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/components/footer/footer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/components/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/layouts/sample/sample.layout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/layouts/sample/sample.layout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@theme/styles/themes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/styles/themes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-menu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,7 +14,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -86,7 +74,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
@@ -131,6 +118,7 @@
         <option value="$PROJECT_DIR$/src/app/@shared/config/index.ts" />
         <option value="$PROJECT_DIR$/src/app/@shared/helpers/sysinfo.helper.ts" />
         <option value="$PROJECT_DIR$/src/app/@shared/shared.module.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -165,6 +153,13 @@
               <item name="northernstars-frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="northernstars-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="northernstars-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="@core" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,15 +228,16 @@
       <workItem from="1546000427975" duration="10000" />
       <workItem from="1546554899992" duration="3490000" />
       <workItem from="1546561851775" duration="1005000" />
-      <workItem from="1546732689776" duration="5138000" />
+      <workItem from="1546732689776" duration="5298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17686000" />
+    <option name="totallyTimeSpent" value="17846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-159" y="-900" width="1600" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15326156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -287,13 +283,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/pages/pages.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@nebular/theme/components/menu/menu.component.metadata.json" />
     <entry file="file://$PROJECT_DIR$/src/app/pages/pages.component.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -636,6 +625,13 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
         </state>
       </provider>
     </entry>

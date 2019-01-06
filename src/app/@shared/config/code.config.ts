@@ -1,4 +1,4 @@
-import { findByProp } from '../helpers';
+import { findByProp } from '../helpers/general.helper';
 import { IResponse } from '../models';
 
 let RESPONSE_CODES: { [key: string]: IResponse | any } = {};

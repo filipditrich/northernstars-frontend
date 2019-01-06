@@ -1,5 +1,5 @@
 import { environment } from '../../../environments/environment';
-import { findByProp } from '../helpers';
+import { findByProp } from '../helpers/general.helper';
 import { IEndpoint } from '../models';
 
 let ENDPOINTS: { [key: string]: IEndpoint | any } = {};

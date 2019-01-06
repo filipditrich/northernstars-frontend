@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
               private ngZone: NgZone) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     // load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
       const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {

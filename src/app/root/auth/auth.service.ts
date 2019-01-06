@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
 import {getUrl} from '../../@shared/config';
-import {IRegisterRequest, IRegistrationRequest, IResource} from '../../@shared/models';
+import {IRegisterRequest, IRegistrationRequest, IResetInput, IResetRequest, IResource} from '../../@shared/models';
 import {ILoginRequest} from '../../@shared/models/auth.model';
 
 @Injectable({
@@ -56,6 +56,44 @@ export class AuthService {
    */
   requestRegistration(input: IRegistrationRequest): Observable<IResource> {
     return this.http.post<IResource>(getUrl('operator', 'REG_REQ'), { input });
+  }
+
+  /**
+   * @description Password Reset Request check
+   * @param {string} hash
+   * @return {Observable<IResource>}
+   */
+  checkPasswordResetRequest(hash: string): Observable<IResource> {
+    const input = { hash: hash };
+    return this.http.post<IResource>(`${getUrl( 'operator', 'EXIST_CHECK')}/password-reset`, { input });
+  }
+
+  /**
+   * @description Password reset
+   * @param {string} hash
+   * @param {IResetRequest} input
+   * @return {Observable<IResource>}
+   */
+  createNewPassword(hash: string, input: IResetRequest): Observable<IResource> {
+    return this.http.post<IResource>(`${getUrl('operator', 'PWD_RES')}/${hash}`, { input });
+  }
+
+  /**
+   * @description Password reset request
+   * @param {IResetInput} input
+   * @return {Observable<IResource>}
+   */
+  requestPasswordReset(input: IResetInput): Observable<IResource> {
+    return this.http.post<IResource>(getUrl( 'operator', 'PWD_FGT'), { input });
+  }
+
+  /**
+   * @description Username reset request
+   * @param {IResetInput} input
+   * @return {Observable<IResource>}
+   */
+  sendUsernameToEmail(input: IResetInput): Observable<IResource> {
+    return this.http.post<IResource>(getUrl('operator', 'USN_FGT'), { input });
   }
 
 }

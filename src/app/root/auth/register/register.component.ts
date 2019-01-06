@@ -66,7 +66,7 @@ export class RegisterComponent implements OnInit {
   get team(): AbstractControl { return this.form.get('team'); }
 
   /** ngOnInit **/
-  ngOnInit() {
+  ngOnInit(): void {
     this.team.setValue(0, { onlySelf: true });
     this.route.data.subscribe(data => {
       this.request = data.request;

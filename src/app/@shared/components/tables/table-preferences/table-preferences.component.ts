@@ -27,7 +27,7 @@ export class TablePreferencesComponent implements OnInit {
   /**
    * @description ngOnInit
    */
-  ngOnInit() {
+  ngOnInit(): void {
     this.sortList();
     const filterOptions: any[] = Object.values(this.filterOptions);
     this.FOCheckbox = filterOptions.filter(filter => filter.type === 'checkbox');

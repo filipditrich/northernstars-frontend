@@ -27,7 +27,7 @@ export class ContactsComponent implements OnInit, OnDestroy {
       });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
 
     this.userService.getUsers()
       .subscribe((users: any) => {

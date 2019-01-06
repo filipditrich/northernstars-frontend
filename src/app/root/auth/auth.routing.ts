@@ -6,7 +6,10 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { RegistrationRequestData } from './register/register.guard';
+import {CredentialsRequestComponent} from './requests/credentials/credentials-request.component';
 import { RegistrationRequestComponent } from './requests/registration/registration-request.component';
+import {ResetComponent} from './reset/reset.component';
+import {ResetGuard} from './reset/reset.guard';
 
 /**
  * @description Auth Routing
@@ -20,6 +23,8 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent, canActivate: [ PreventLogged ] },
       { path: 'register/:hash', component: RegisterComponent, canActivate: [ PreventLogged ], resolve: { request: RegistrationRequestData } },
       { path: 'registration-request', component: RegistrationRequestComponent, canActivate: [ PreventLogged ] },
+      { path: 'reset/:hash', component: ResetComponent, canActivate: [ PreventLogged, ResetGuard ] },
+      { path: 'credentials-request', component: CredentialsRequestComponent, canActivate: [ PreventLogged ] },
       { path: 'logout', component: LogoutComponent },
     ],
   },

@@ -42,7 +42,7 @@ export class RegistrationRequestComponent implements OnInit {
   get email(): AbstractControl { return this.form.get('email'); }
 
   /** ngOnInit **/
-  ngOnInit() {
+  ngOnInit(): void {
     this.isLoading = false;
   }
 

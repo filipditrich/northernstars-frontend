@@ -15,7 +15,7 @@ export class LogoutComponent implements OnInit {
               private toasterService: ToasterService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     SecurityService.logOut();
     this.router.navigate(['/auth/']).then(() => {
       this.toasterService.popAsync('info', translate('LOGGED_OUT_TITLE'), translate('LOGGED_OUT_MSG'));

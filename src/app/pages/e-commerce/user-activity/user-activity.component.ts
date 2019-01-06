@@ -67,7 +67,7 @@ export class ECommerceUserActivityComponent implements OnDestroy, OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getUserActivity(this.type);
   }
 

@@ -29,7 +29,7 @@ export class EarningCardFrontComponent implements OnDestroy, OnInit {
       });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getEarningCardData(this.selectedCurrency);
   }
 

@@ -10,10 +10,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SortablejsModule } from 'angular-sortablejs';
+import { NotFoundComponent } from './pages/miscellaneous/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,6 @@ import { SortablejsModule } from 'angular-sortablejs';
     AppComponent,
   ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' },
   ],
 })
 export class AppModule { }

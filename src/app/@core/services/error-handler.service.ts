@@ -9,7 +9,7 @@ export class GlobalErrorHandler implements ErrorHandler {
   handleError(error) {
 
     // TODO: do some stuff here
-    if (environment.name === 'prod') {
+    if (environment.production) {
       console.error('ERROR: RELOADING');
       window.location.reload();
     }

@@ -13,5 +13,5 @@ import { MENU_ITEMS } from './root-menu';
   `,
 })
 export class RootComponent {
-  menu = MENU_ITEMS;
+  public menu = MENU_ITEMS;
 }

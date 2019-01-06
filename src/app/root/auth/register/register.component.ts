@@ -109,7 +109,7 @@ export class RegisterComponent implements OnInit {
     this.isLoading = true;
     this.authService.registerUser(this.hash, input).subscribe(response => {
       if (response.response.success && response.output.user) {
-        this.router.navigate(['/auth']).then(() => {
+        this.router.navigate(['/auth/']).then(() => {
           this.toasterService.popAsync('success', translate('REGISTERED_TITLE'), translate('REGISTERED_MSG'));
         }).catch(error => {
           this.errorHelper.handleGenericError(error);

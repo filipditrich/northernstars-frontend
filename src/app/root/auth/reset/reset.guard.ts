@@ -40,7 +40,7 @@ export class ResetGuard implements CanActivate {
         }
       }, err => {
         const error = !!err.error ? !!err.error.response ? err.error.response : err.error : err;
-        this.router.navigate(['/auth']).then(() => {
+        this.router.navigate(['/auth/']).then(() => {
           switch (error.name) {
             case 'REQUEST_INVALID': { this.toasterService.popAsync('error', translate('REQUEST_INVALID_TITLE'), translate('REQUEST_INVALID_MSG')); break; }
             default: { this.errorHelper.handleGenericError(error); break; }

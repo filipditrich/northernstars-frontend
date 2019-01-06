@@ -28,7 +28,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
       return true;
     } else {
       const returnUrl = route.url;
-      this.router.navigate(['/auth'], { queryParams: { return: returnUrl } })
+      this.router.navigate(['/auth/'], { queryParams: { return: returnUrl } })
         .then(() => {
           if (!route.data['noToast']) {
             const hasBeenLogged = localStorage.getItem('user') || false;

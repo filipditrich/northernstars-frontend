@@ -21,14 +21,14 @@
           <label for="rememberMe" class="non-order m-0 ml-2">{{ 'REMEMBER_ME' | translate }}</label>
         </div>
         <small class="form-text">
-          <a routerLink="/auth/forgotten-credentials">{{ 'FORGOTTEN_CREDS' | translate }}?</a>
+          <a routerLink="/auth/request/credentials">{{ 'FORGOTTEN_CREDS' | translate }}?</a>
         </small>
       </div>
       <button fullwidth nbbutton class="btn btn-primary col-sm-12 p-3" [ngClass]="{'btn-disabled': !form.valid && form.touched}" aria-disabled="false">{{ 'SIGN_IN' | translate }}</button>
     </form>
     <div class="links d-flex justify-content-between">
       <small class="form-text">
-        {{ 'LOGIN_REGISTER_MSG' | translate }} <strong><a routerLink="/auth/request-registration">{{ 'REGISTER' | translate }}</a>.</strong>
+        {{ 'LOGIN_REGISTER_MSG' | translate }} <strong><a routerLink="/auth/request/registration">{{ 'REGISTER' | translate }}</a>.</strong>
       </small>
     </div>
   </nb-auth-block>

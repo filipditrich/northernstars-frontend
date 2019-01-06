@@ -20,6 +20,13 @@ export class SecurityService {
   }
 
   /**
+   * @description Extracts the user object from saved data
+   */
+  static getUser(): IUser {
+    return JSON.parse(localStorage.getItem('user'));
+  }
+
+  /**
    * @description Returns If the token (<t> or stored) is valid
    */
   static isTokenValid(t?: string): boolean {
@@ -40,7 +47,6 @@ export class SecurityService {
    */
   static logOut(): void {
     localStorage.removeItem('user');
-    localStorage.removeItem('auth_app_token');
   }
 
 }

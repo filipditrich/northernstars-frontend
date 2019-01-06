@@ -2,7 +2,7 @@
   <nb-auth-block>
     <h2 class="title">{{ 'SIGN_IN' | translate }}</h2>
     <small class="form-text sub-title">{{ 'SIGN_IN_MSG' | translate }}</small>
-    <form autocomplete="" novalidate="" class="ng-touched ng-dirty ng-valid form" [formGroup]="form" (submit)="onSubmit(form.value)">
+    <form autocomplete="" novalidate="" class="ng-touched ng-dirty ng-valid form" [formGroup]="form" (submit)="onSubmit(form.value)" autocomplete="true">
       <div class="form-group group d-flex flex-column my-4" [ngClass]="{ 'error': username.hasError('no-match') || (username.hasError('required') && (username.dirty || username.touched)) }">
         <label class="sr-only" for="input-username">{{ 'USERNAME' | translate }}</label>
         <input fullwidth id="input-username" name="username" nbinput formControlName="username" placeholder="Username" type="text" ng-reflect-name="username" class="input-full-width input-md ng-dirty ng-valid ng-touched" required autocomplete="username">

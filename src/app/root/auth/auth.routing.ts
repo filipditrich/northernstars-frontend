@@ -1,16 +1,16 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { AuthComponent } from './auth.component';
 
-import { RootComponent } from './root.component';
-
+/**
+ * @description Auth Routing
+ */
 const routes: Routes = [
   {
     path: '',
-    component: RootComponent,
-  },
-  {
-    path: 'auth',
-    loadChildren: 'app/root/auth/auth.module#AuthModule',
+    component: AuthComponent,
+    children: [
+    ],
   },
 ];
 
@@ -18,5 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class RootRouting {
-}
+export class AuthRouting { }

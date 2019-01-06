@@ -14,9 +14,11 @@ export class SecurityService {
    * @description Stores logged in User data
    * @param user
    * @param token
+   * @param rememberMe
    */
-  static storeUserData(user: IUser, token: string): void {
+  static storeUserData(user: IUser, token: string, rememberMe: boolean): void {
     localStorage.setItem('user', JSON.stringify({ user, token }));
+    localStorage.setItem('rememberMe', String(rememberMe));
   }
 
   /**

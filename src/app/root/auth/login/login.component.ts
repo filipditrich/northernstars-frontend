@@ -85,7 +85,7 @@ export class LoginComponent implements OnInit {
         if (moment().isBefore(new Date(sysInfo('launchDate'))) && response.output['user']['roles'].indexOf(UserRoles.Admin) < 0) {
           this.router.navigate(['/auth/locked']);
         } else {
-          SecurityService.storeUserData(response.output['user'], response.output['token']);
+          SecurityService.storeUserData(response.output['user'], response.output['token'], this.rememberMe.value);
           const returnUrl = this.route.snapshot.queryParamMap.has('return') ? this.route.snapshot.queryParamMap.get('return') : false;
           this.router.navigate([ returnUrl || '/' ]).then(() => {
             this.toasterService.popAsync('success', translate('LOGGED_IN_TITLE'), translate('LOGGED_IN_MSG'));

@@ -10,3 +10,5 @@ export * from './match.model';
 export * from './place.model';
 export * from './team.model';
 export * from './user.model';
+export * from './config.model';
+export * from './auth.model';

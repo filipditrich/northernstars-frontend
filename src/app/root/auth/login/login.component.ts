@@ -79,6 +79,7 @@ export class LoginComponent implements OnInit {
    * @param input
    */
   callLoginService(input: ILoginRequest): void {
+    this.isLoading = true;
     this.authService.logInRequest(input).subscribe(response => {
       if (response.response.success && response.output['token']) {
         if (moment().isBefore(new Date(sysInfo('launchDate'))) && response.output['user']['roles'].indexOf(UserRoles.Admin) < 0) {
@@ -88,7 +89,6 @@ export class LoginComponent implements OnInit {
           const returnUrl = this.route.snapshot.queryParamMap.has('return') ? this.route.snapshot.queryParamMap.get('return') : false;
           this.router.navigate([ returnUrl || '/' ]).then(() => {
             this.toasterService.popAsync('success', translate('LOGGED_IN_TITLE'), translate('LOGGED_IN_MSG'));
-            this.isLoading = false;
           }).catch(error => {
             this.errorHelper.handleGenericError(error);
             this.isLoading = false;

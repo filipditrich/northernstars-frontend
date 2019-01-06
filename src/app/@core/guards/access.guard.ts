@@ -78,7 +78,7 @@ export class PreventLogged implements CanActivate, CanActivateChild {
    */
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (SecurityService.isTokenValid()) {
-      this.router.navigate([ route.queryParamMap.get('return') || '/']).then(() => {
+      this.router.navigate([ route.queryParamMap.get('return') || '/' ]).then(() => {
         const toast: Toast = {
           type: 'warning',
           title: translate('WARNING'),

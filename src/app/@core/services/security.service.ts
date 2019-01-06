@@ -35,4 +35,12 @@ export class SecurityService {
     return user ? JSON.parse(user).token : '';
   }
 
+  /**
+   * @description Removes user login saved data
+   */
+  static logOut(): void {
+    localStorage.removeItem('user');
+    localStorage.removeItem('auth_app_token');
+  }
+
 }

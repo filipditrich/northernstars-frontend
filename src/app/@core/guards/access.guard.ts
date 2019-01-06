@@ -18,7 +18,12 @@ export class AuthGuard implements CanActivate, CanActivateChild {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) { return this.resolve(route, state); }
   canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) { return this.resolve(route, state); }
 
-  resolve(route, state) {
+  /**
+   * @description Resolve function
+   * @param route
+   * @param state
+   */
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (SecurityService.isTokenValid()) {
       return true;
     } else {
@@ -56,14 +61,22 @@ export class AuthGuard implements CanActivate, CanActivateChild {
  * Prevents already logged in users to access certain pages (login, register etc.)
  */
 @Injectable()
-export class PreventLogged implements CanActivate {
+export class PreventLogged implements CanActivate, CanActivateChild {
 
   constructor(private securityService: SecurityService,
               private router: Router,
               private errorHelper: ErrorHelper,
               private toasterService: ToasterService) { }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) { return this.resolve(route, state); }
+  canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) { return this.resolve(route, state); }
+
+  /**
+   * @description Resolve function
+   * @param route
+   * @param state
+   */
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (SecurityService.isTokenValid()) {
       this.router.navigate([ route.queryParamMap.get('return') || '/']).then(() => {
         const toast: Toast = {

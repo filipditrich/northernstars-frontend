@@ -15,7 +15,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
     ],
   },
-  { path: 'auth',  loadChildren: 'app/root/auth/auth.module#AuthModule', canActivate: [ PreventLogged ] },
+  { path: 'auth',  loadChildren: 'app/root/auth/auth.module#AuthModule' },
 ];
 
 @NgModule({

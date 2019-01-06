@@ -1,7 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { PreventLogged } from '../../@core/guards/access.guard';
 import { AuthComponent } from './auth.component';
-import {LoginComponent} from './login/login.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 /**
  * @description Auth Routing
@@ -12,7 +14,8 @@ const routes: Routes = [
     component: AuthComponent,
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
-      { path: 'login', component: LoginComponent },
+      { path: 'login', component: LoginComponent, canActivate: [ PreventLogged ] },
+      { path: 'logout', component: LogoutComponent },
     ],
   },
 ];

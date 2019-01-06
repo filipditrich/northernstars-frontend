@@ -12,6 +12,7 @@ import { AuthComponent } from './auth.component';
 import { AuthRouting } from './auth.routing';
 import {AuthService} from './auth.service';
 import { LoginComponent } from './login/login.component';
+import {LogoutComponent} from './logout/logout.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AuthComponent,
     LoginComponent,
+    LogoutComponent,
   ],
   providers: [
     AuthService,

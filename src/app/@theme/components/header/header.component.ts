@@ -1,9 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
+import { filter } from 'rxjs/operators';
 import { UserService } from '../../../@core/data/users.service';
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 import { LayoutService } from '../../../@core/data/layout.service';
+import { translate } from '../../../@shared/helpers';
 
 @Component({
   selector: 'ngx-header',
@@ -17,14 +20,25 @@ export class HeaderComponent implements OnInit {
   user: any;
 
   userMenu = [
-    { title: 'Log out' },
+    { title: translate('LOG_OUT') },
   ];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
               private userService: UserService,
               private analyticsService: AnalyticsService,
-              private layoutService: LayoutService) {
+              private layoutService: LayoutService,
+              private router: Router) {
+
+    // handles item menu click event
+    menuService.onItemClick()
+      .pipe(filter(({ tag }) => tag === tag))
+      .subscribe(bag => {
+        switch (bag.item.title) {
+          case translate('LOG_OUT'): this.router.navigate([ '/auth/logout' ]); break;
+        }
+      });
+
   }
 
   ngOnInit() {

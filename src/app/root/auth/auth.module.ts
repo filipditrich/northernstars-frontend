@@ -10,6 +10,8 @@ import { SharedModule } from '../../@shared/shared.module';
 import { ThemeModule } from '../../@theme/theme.module';
 import { AuthComponent } from './auth.component';
 import { AuthRouting } from './auth.routing';
+import {AuthService} from './auth.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -23,8 +25,10 @@ import { AuthRouting } from './auth.routing';
   ],
   declarations: [
     AuthComponent,
+    LoginComponent,
   ],
   providers: [
+    AuthService,
     { provide: HTTP_INTERCEPTORS,
       useClass: HttpHeadersInterceptor,
       multi: true,

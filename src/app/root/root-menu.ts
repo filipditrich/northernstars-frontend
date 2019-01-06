@@ -4,7 +4,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Home',
     icon: 'icon ion-ios-home',
-    link: '/',
+    link: '/home',
     home: true,
   },
 ];

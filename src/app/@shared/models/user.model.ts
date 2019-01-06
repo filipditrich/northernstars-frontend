@@ -17,11 +17,11 @@ export interface IUser extends IDefault {
  * User Roles
  */
 export enum UserRoles {
-  admin = 'admin',
-  player = 'player',
-  super = 'super',
-  mod = 'moderator',
-  deleted = 'deleted',
+  Admin = 'admin',
+  Player = 'player',
+  Super = 'super',
+  Mod = 'moderator',
+  Deleted = 'deleted',
 }
 
 /**

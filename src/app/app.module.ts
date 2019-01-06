@@ -23,10 +23,6 @@ export function PreloadInitializerProviderFactory(provider: PreloadInitializer) 
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NotFoundComponent,
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -39,6 +35,10 @@ export function PreloadInitializerProviderFactory(provider: PreloadInitializer) 
     CoreModule.forRoot(),
     ToasterModule.forRoot(),
     SortablejsModule.forRoot({ animation: 150 }),
+  ],
+  declarations: [
+    AppComponent,
+    NotFoundComponent,
   ],
   bootstrap: [
     AppComponent,

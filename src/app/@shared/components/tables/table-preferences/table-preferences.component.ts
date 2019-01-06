@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { translate, ErrorHelper } from '../../helpers';
+import { translate, ErrorHelper } from '../../../helpers';
 
 @Component({
   selector: 'ngx-match-table-preferences',

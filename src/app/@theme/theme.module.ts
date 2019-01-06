@@ -39,6 +39,7 @@ import {
 } from '@nebular/theme';
 
 import { NbSecurityModule } from '@nebular/security';
+import { SharedModule } from '../@shared/shared.module';
 
 import {
   FooterComponent,
@@ -155,7 +156,7 @@ const NB_THEME_PROVIDERS = [
 ];
 
 @NgModule({
-  imports: [...BASE_MODULES, ...NB_MODULES],
+  imports: [...BASE_MODULES, ...NB_MODULES, SharedModule],
   exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
   entryComponents: [...ENTRY_COMPONENTS],

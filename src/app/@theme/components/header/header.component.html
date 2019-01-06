@@ -3,7 +3,7 @@
      [class.right]="position === 'inverse'">
   <div class="logo-containter">
     <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
-    <div class="logo" (click)="goToHome()">Application Name</div>
+    <div class="logo" (click)="goToHome()">{{ 'appName' | sysinfo }}</div>
   </div>
 </div>
 
@@ -13,7 +13,7 @@
     [class.right]="position === 'normal'"
     [class.left]="position === 'inverse'">
     <nb-action *nbIsGranted="['view', 'user']" >
-      <nb-user [nbContextMenu]="userMenu" [name]="'Name Surname'" [title]="'@username'"></nb-user>
+      <nb-user [nbContextMenu]="userMenu" name="{{ 'NAME' | translate }}" title="@{{ 'USERNAME' | translate }}"></nb-user>
     </nb-action>
   </nb-actions>
 </div>

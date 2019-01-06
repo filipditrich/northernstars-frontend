@@ -1,7 +1,7 @@
 import { LocalDataSource } from 'ng2-smart-table-extended';
+import { DefaultModalComponent } from '../modals/default-modal.component';
 import { TablePreferencesComponent } from './table-preferences/table-preferences.component';
-import { ModalComponent } from '../../pages/bootstrap/modals/modal/modal.component';
-import { translate, ErrorHelper } from '../helpers';
+import { translate, ErrorHelper } from '../../helpers';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 /**
@@ -86,7 +86,7 @@ export class DefaultTableComponent {
         this.applyDefaults();
       } else {
         // user unchecked all filters intentionally
-        const modal = this.modalService.open(ModalComponent, {
+        const modal = this.modalService.open(DefaultModalComponent, {
           container: 'nb-layout',
           keyboard: false,
           backdrop: 'static',

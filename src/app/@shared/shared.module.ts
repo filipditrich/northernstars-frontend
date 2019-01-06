@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SortablejsModule } from 'angular-sortablejs';
+import { DefaultModalComponent } from './components/modals/default-modal.component';
 import { SysInfoPipe, TranslatePipe, LocalDatePipe } from './pipes';
 import { ErrorHelper, HumanizerHelper } from './helpers';
-import { TablePreferencesComponent, EPlayersRendererComponent } from './tables';
+import { TablePreferencesComponent, EPlayersRendererComponent } from './components/tables';
 
 @NgModule({
   imports: [
@@ -16,9 +17,11 @@ import { TablePreferencesComponent, EPlayersRendererComponent } from './tables';
     LocalDatePipe,
     TablePreferencesComponent,
     EPlayersRendererComponent,
+    DefaultModalComponent,
   ],
   entryComponents: [
     EPlayersRendererComponent,
+    DefaultModalComponent,
   ],
   providers: [
     HumanizerHelper,

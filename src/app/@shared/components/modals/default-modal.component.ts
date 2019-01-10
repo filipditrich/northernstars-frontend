@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import {NgbActiveModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngx-modal',
   template: `
     <div class="modal-header">
       <span>{{ modalHeader }}</span>
-      <button class="close" aria-label="Close" (click)="closeModal()">
+      <button class="close" aria-label="Close" tabindex="-1" (click)="closeModal()">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
@@ -25,6 +25,12 @@ export class DefaultModalComponent {
   constructor(private activeModal: NgbActiveModal) { }
 
   closeModal() {
-    this.activeModal.close('cfc');
+    this.activeModal.close(false);
   }
 }
+
+export const DefaultModalOptions: NgbModalOptions = {
+  container: 'nb-layout',
+  keyboard: false,
+  backdrop: 'static',
+};

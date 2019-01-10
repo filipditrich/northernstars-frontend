@@ -46,9 +46,19 @@ export function passwordConfirmation(t?: any): ValidatorFn {
  */
 export function isUpperCase(): ValidatorFn {
   return (control: AbstractControl): {[key: string]: any | null} => {
-    // TODO: check the validity of this, now I'm not sure if its going to work with this regexp
-    const isLower = control.value ? /^[a-z0-9_]+$/.test(control.value) : false;
-    return isLower ? null : { 'is-upper-case' : true };
+    const isUpper = control.value.toUpperCase() === control.value;
+    return isUpper ? null : { 'is-upper-case': true };
+  };
+}
+
+/**
+ * @description If value is all lowercase
+ * @return {ValidatorFn}
+ */
+export function isLowerCase(): ValidatorFn {
+  return (control: AbstractControl): {[key: string]: any | null} => {
+    const isUpper = control.value.toLowerCase() === control.value;
+    return isUpper ? null : { 'is-upper-case': true };
   };
 }
 

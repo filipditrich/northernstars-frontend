@@ -12,12 +12,13 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
  */
 export class DefaultTableComponent {
 
-  public isLoading = true;
+  public isLoading: boolean = true;
+  public isModalOpen: boolean = false;
 
   public autoRefresh: boolean = false;
-  public refreshTimeout: number = 60000;
   public allowBackgroundRefresh: boolean = false;
-  public isTabActive = true;
+  public isTabActive: boolean = true;
+  public refreshTimeout: number = 60000;
 
   public storagePrefName: string = 'defaultTable';
   public source: LocalDataSource;
@@ -179,6 +180,7 @@ export class DefaultTableComponent {
    * @description Opens columnPreferences modal window
    */
   openPreferences(): void {
+    this.isModalOpen = true;
     // create the modal instance
     const modal = this.modalService.open(TablePreferencesComponent, {
       container: 'nb-layout',
@@ -199,6 +201,7 @@ export class DefaultTableComponent {
         // reload the data
         this.loadData();
       }
+      this.isModalOpen = false;
     }, error => null);
   }
 
@@ -223,7 +226,7 @@ export class DefaultTableComponent {
    */
   refreshInterval(): void {
     setInterval(() => {
-      if (this.autoRefresh && (this.allowBackgroundRefresh || this.isTabActive)) {
+      if (this.autoRefresh && !this.isModalOpen && (this.allowBackgroundRefresh || this.isTabActive)) {
         this.loadData();
       }
     }, this.refreshTimeout);

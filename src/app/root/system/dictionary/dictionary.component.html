@@ -12,7 +12,11 @@
               <h2 class="m-0 pl-0 col d-flex align-items-center">{{ 'DICTIONARY_MANAGER' | translate }}</h2>
 
               <!-- Action Button -->
-              <button class="btn btn-primary mx-2 fs-larger">{{ 'ADD_RECORD' | translate }}</button>
+              <button
+                (click)="onAdd()"
+                class="btn btn-primary mx-2 fs-larger">
+                {{ 'ADD_RECORD' | translate }}
+              </button>
 
               <!-- Refresh -->
               <button
@@ -37,7 +41,8 @@
           <tbody>
             <ng2-smart-table-extended
               [settings]="settings"
-              [source]="source">
+              [source]="source"
+              (delete)="onDelete($event)">
             </ng2-smart-table-extended>
           </tbody>
 

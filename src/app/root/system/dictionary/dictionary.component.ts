@@ -1,10 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {LocalDataSource} from 'ng2-smart-table-extended';
-import {DefaultTableComponent} from '../../../@shared/components';
-import {ErrorHelper, HumanizerHelper, translate} from '../../../@shared/helpers';
-import {FilterOptionType} from '../../../@shared/models/table.model';
-import {DictionaryService} from './dictionary.service';
+import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ToasterService } from 'angular2-toaster';
+import { LocalDataSource } from 'ng2-smart-table-extended';
+import { DefaultModalComponent, DefaultModalOptions, DefaultTableComponent } from '../../../@shared/components';
+import { ErrorHelper, HumanizerHelper, translate } from '../../../@shared/helpers';
+import { IDict } from '../../../@shared/models';
+import { FilterOptionType } from '../../../@shared/models/table.model';
+import {CreateDictionaryComponent} from './create/create-dictionary.component';
+import { DictionaryService } from './dictionary.service';
 
 @Component({
   selector: 'ngx-system-dictionary',
@@ -16,7 +19,8 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
   constructor(errorHelper: ErrorHelper,
               modalService: NgbModal,
               private humanizer: HumanizerHelper,
-              private dictService: DictionaryService) {
+              private dictService: DictionaryService,
+              private toaster: ToasterService) {
 
     super(errorHelper, modalService);
 
@@ -210,6 +214,66 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
         case 'NO_DICTIONARYS_FOUND': { this.source.load([]).then(() => { this.isLoading = false; }); break; }
         default: { this.errorHelper.handleGenericError(err); break; }
       }
+    });
+  }
+
+  /**
+   * @description Handler for onAdd event
+   */
+  onAdd(): void {
+    this.isModalOpen = true;
+    const modal = this.modalService.open(CreateDictionaryComponent, DefaultModalOptions);
+    modal.result.then((re: boolean) => {
+      if (re) this.refresh();
+      this.isModalOpen = false;
+    });
+  }
+
+  /**
+   * @description Handler for onDelete event
+   * @param event
+   */
+  onDelete(event: any): void {
+    this.isModalOpen = true;
+    const modal = this.modalService.open(DefaultModalComponent, DefaultModalOptions);
+
+    modal.componentInstance.modalHeader = translate('DELETE_CONFIRM_TITLE');
+    modal.componentInstance.modalContent = translate('DELETE_CONFIRM_MSG');
+    modal.componentInstance.modalButtons = [
+      {
+        text: translate('CANCEL'),
+        classes: 'btn-secondary',
+        action: () => { modal.close(false); },
+      },
+      {
+        text: translate('DELETE'),
+        classes: 'btn-danger',
+        action: () => { this.delete(event.data, modal); },
+      },
+    ];
+    modal.result.then((re: boolean) => {
+      if (re) this.refresh();
+      this.isModalOpen = false;
+    });
+  }
+
+  /**
+   * @description Removes a Dictionary
+   * @param {IDict} dict
+   * @param modal
+   */
+  delete(dict: IDict, modal: any): void {
+    this.dictService.delete(dict.id).subscribe(response => {
+      if (response.response.success) {
+        this.toaster.popAsync('info', translate('DELETE_SUCCESS_TITLE'), translate('DELETE_SUCCESS_MSG'));
+        modal.close(true);
+      } else {
+        this.errorHelper.processedButFailed(response);
+        modal.close(false);
+      }
+    }, error => {
+      this.errorHelper.handleGenericError(error);
+      modal.close(false);
     });
   }
 

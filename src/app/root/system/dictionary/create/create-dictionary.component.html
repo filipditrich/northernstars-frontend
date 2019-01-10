@@ -1,0 +1,110 @@
+<div class="modal-header">
+  <h3>{{ 'ADD_RECORD' | translate }}</h3>
+  <button class="close" aria-label="Close" tabindex="-1" (click)="closeModal(false)">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body row">
+  <div class="col-sm-12">
+
+    <p class="text-muted">{{ 'DICT_MGR_CREATE_TEXT' | translate }}</p>
+
+    <form novalidate="" class="form" [formGroup]="form" (submit)="onSubmit()">
+
+      <div class="row">
+
+        <!-- ID -->
+        <div class="form-group group d-flex flex-column col-sm-12"
+             [ngClass]="{ 'error' : id.invalid && (id.dirty || id.touched) }">
+
+          <!-- Input and Label -->
+          <label for="id">{{ 'ID' | translate }}*</label>
+          <input
+            fullwidth
+            id="id"
+            name="id"
+            nbinput
+            formControlName="id"
+            type="text"
+            ng-reflect-name="id"
+            class="input-full-width input-md" required
+            (change)="onIDChange()">
+
+          <!-- Error Messages -->
+          <!-- TODO: validationError pipe -->
+          <small class="text-danger" *ngIf="id.hasError('required') && (id.dirty || id.touched)">{{ 'DICT_ID_REQUIRED' | translate }}</small>
+          <small class="text-danger" *ngIf="id.hasError('duplicate')">{{ 'DICT_ID_DUPLICATE' | translate }}</small>
+        </div>
+
+        <!-- Czech -->
+        <div class="form-group group d-flex flex-column col-sm-12"
+             [ngClass]="{ 'error' : cs.invalid && (cs.dirty || cs.touched) }">
+
+          <!-- Input and Label -->
+          <label for="cs">{{ 'CZECH' | translate }}*</label>
+          <input
+            fullwidth
+            id="cs"
+            name="cs"
+            nbinput
+            formControlName="cs"
+            type="text"
+            ng-reflect-name="cs"
+            class="input-full-width input-md" required>
+
+          <!-- Error Messages -->
+          <small class="text-danger" *ngIf="cs.hasError('required') && (cs.dirty || cs.touched)">{{ 'DICT_CS_REQUIRED' | translate }}</small>
+        </div>
+
+        <!-- English -->
+        <div class="form-group group d-flex flex-column col-sm-12"
+             [ngClass]="{ 'error' : en.invalid && (en.dirty || en.touched) }">
+
+          <!-- Input and Label -->
+          <label for="en">{{ 'ENGLISH' | translate }}*</label>
+          <input
+            fullwidth
+            id="en"
+            name="en"
+            nbinput
+            formControlName="en"
+            type="text"
+            ng-reflect-name="en"
+            class="input-full-width input-md" required>
+
+          <!-- Error Messages -->
+          <small class="text-danger" *ngIf="en.hasError('required') && (en.dirty || en.touched)">{{ 'DICT_EN_REQUIRED' | translate }}</small>
+        </div>
+
+      </div>
+
+      <hr class="border">
+
+      <!-- Submit -->
+      <div class="d-flex flex-wrap justify-content-end mb-0 mt-2">
+
+        <!-- Cancel -->
+        <button
+          nbbutton
+          class="btn btn-secondary m-2 p-3"
+          type="button"
+          (click)="closeModal(false)">
+          {{ 'CANCEL' | translate }}
+        </button>
+
+        <!-- Submit -->
+        <button
+          nbbutton
+          type="submit"
+          class="btn btn-primary m-2 p-3"
+          [ngClass]="{'btn-disabled': !form.valid }">
+          {{ 'CREATE' | translate }}
+        </button>
+
+      </div>
+
+    </form>
+  </div>
+</div>
+
+

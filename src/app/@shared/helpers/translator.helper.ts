@@ -16,10 +16,10 @@ export function translate(id: string, data?: any, lang?: string): string {
   lang = !!lang ? lang : getLang();
   let string: string = !dict ? id : !lang ? id : dict[lang];
   if (!string) { output = id; } else {
-    let replace = string.match(/\[(.*?)\]/g);
+    const replace = string.match(/\[(.*?)\]/g);
     if (!!data && !!replace) {
-      replace = replace.map(a => a.replace(/[\[\]]/g, ''));
-      replace.forEach(r => { string = string.replace(r, data[r]); });
+      // replace = replace.map(a => a.replace(/[\[\]]/g, ''));
+      replace.forEach(r => { string = string.replace(r, data[r.replace(/[\[\]]/g, '')]); });
     }
     output = string.replace(/[\[\]]/g, '');
   }

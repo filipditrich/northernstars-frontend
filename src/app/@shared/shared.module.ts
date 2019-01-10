@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {NbTooltipModule} from '@nebular/theme';
 import { SortablejsModule } from 'angular-sortablejs';
 import { DefaultModalComponent } from './components/modals/default-modal.component';
 import { SysInfoPipe, TranslatePipe, LocalDatePipe } from './pipes';
@@ -10,6 +11,7 @@ import { TablePreferencesComponent, EPlayersRendererComponent } from './componen
   imports: [
     CommonModule,
     SortablejsModule,
+    NbTooltipModule,
   ],
   declarations: [
     TranslatePipe,

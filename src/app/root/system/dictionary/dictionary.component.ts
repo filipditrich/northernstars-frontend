@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { DefaultTableComponent } from '../../../@shared/components';
-import { ErrorHelper, HumanizerHelper, translate } from '../../../@shared/helpers';
-import { LocalDataSource } from 'ng2-smart-table-extended';
-import { DictionaryService } from './dictionary.service';
+import {Component, OnInit} from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {LocalDataSource} from 'ng2-smart-table-extended';
+import {DefaultTableComponent} from '../../../@shared/components';
+import {ErrorHelper, HumanizerHelper, translate} from '../../../@shared/helpers';
+import {FilterOptionType} from '../../../@shared/models/table.model';
+import {DictionaryService} from './dictionary.service';
 
 @Component({
   selector: 'ngx-system-dictionary',
@@ -22,11 +23,35 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
     this.storagePrefName = 'dictionary';
     this.source = new LocalDataSource();
     this.filterOptions = {
+      autoRefresh: {
+        value: true,
+        id: 'autoRefresh',
+        title: translate('AUTO_REFRESH'),
+        type: FilterOptionType.Checkbox,
+        options: {
+          hint: {
+            show: true,
+            text: translate('AUTO_REFRESH_HINT'),
+          },
+        },
+      },
+      backgroundRefresh: {
+        value: false,
+        id: 'backgroundRefresh',
+        title: translate('BACKGROUND_REFRESH'),
+        type: FilterOptionType.Checkbox,
+        options: {
+          hint: {
+            show: true,
+            text: translate('BACKGROUND_REFRESH_HINT'),
+          },
+        },
+      },
       rowsPerPage: {
         value: 10,
         id: 'rowsPerPage',
         title: translate('ROWS_PER_PAGE'),
-        type: 'select',
+        type: FilterOptionType.Select,
         options: {
           items: [
             { label: '5', value: 5 },
@@ -34,6 +59,10 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
             { label: '25', value: 25 },
             { label: '50', value: 50 },
           ],
+          hint: {
+            show: true,
+            text: translate('ROWS_PER_PAGE_HINT'),
+          },
         },
       },
     };
@@ -142,7 +171,7 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
       {
         order: 7,
         id: 'updatedAt',
-        title: translate('UPDATED_BY'),
+        title: translate('UPDATED_AT'),
         type: 'string',
         checked: false,
         editable: false,
@@ -156,8 +185,7 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
    * ngOnInit implementation
    */
   ngOnInit(): void {
-    this.loadPreferences();
-    this.loadData();
+    this.init();
   }
 
   /**

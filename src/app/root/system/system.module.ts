@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NbSpinnerModule } from '@nebular/theme';
+import {NbSpinnerModule, NbTooltipModule} from '@nebular/theme';
 import { Ng2SmartTableExtendedModule } from 'ng2-smart-table-extended';
 import { HttpHeadersInterceptor } from '../../@core/services/http–interceptor.service';
 import { SharedModule } from '../../@shared/shared.module';
@@ -19,6 +19,7 @@ import { SystemRouting } from './system.routing';
     ReactiveFormsModule,
     ThemeModule,
     NbSpinnerModule,
+    NbTooltipModule,
     SharedModule,
     Ng2SmartTableExtendedModule,
   ],

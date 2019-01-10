@@ -5,14 +5,35 @@
       <div class="col-sm-12">
         <table class="w-100 table table-responsive d-lg-table">
 
+          <!-- Table Head -->
           <thead>
-            <div class="stc-head d-flex justify-content-end align-items-center">
-              <h2 class="m-0 col">{{ 'DICTIONARY_MANAGER' | translate }}</h2>
-              <button class="button btn btn-hero-secondary mx-2 fs-larger">{{ 'ADD_DICTIONARY' | translate }}</button>
-              <i class="icon ion-ios-cog cursor-pointer fs-large" (click)="openPreferences()"></i>
+            <div class="stc-head d-flex justify-content-end align-items-stretch">
+              <!-- Heading -->
+              <h2 class="m-0 pl-0 col d-flex align-items-center">{{ 'DICTIONARY_MANAGER' | translate }}</h2>
+
+              <!-- Action Button -->
+              <button class="btn btn-primary mx-2 fs-larger">{{ 'ADD_RECORD' | translate }}</button>
+
+              <!-- Refresh -->
+              <button
+                (click)="refresh()"
+                [ngClass]="{ 'pointer-events-none': isLoading }"
+                nbTooltip="{{ 'RELOAD' | translate }}"
+                class="btn btn-secondary mx-2 px-3 py-1">
+                <i class="icon ion-ios-refresh-empty cursor-pointer fs-large"></i>
+              </button>
+
+              <!-- Table Preferences -->
+              <button
+                (click)="openPreferences()"
+                nbTooltip="{{ 'OPEN_PREFERENCES' | translate }}"
+                class="btn btn-secondary mx-2 px-3 py-1">
+                <i class="icon ion-ios-cog-outline cursor-pointer fs-large"></i>
+              </button>
             </div>
           </thead>
 
+          <!-- Table body -->
           <tbody>
             <ng2-smart-table-extended
               [settings]="settings"

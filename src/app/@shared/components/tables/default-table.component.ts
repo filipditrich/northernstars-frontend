@@ -1,4 +1,6 @@
+import { HostListener } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table-extended';
+import { IFilterOptions } from '../../models/table.model';
 import { DefaultModalComponent } from '../modals/default-modal.component';
 import { TablePreferencesComponent } from './table-preferences/table-preferences.component';
 import { translate, ErrorHelper } from '../../helpers';
@@ -11,8 +13,17 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class DefaultTableComponent {
 
   public isLoading = true;
+
+  public autoRefresh: boolean = false;
+  public refreshTimeout: number = 60000;
+  public allowBackgroundRefresh: boolean = false;
+  public isTabActive = true;
+
   public storagePrefName: string = 'defaultTable';
   public source: LocalDataSource;
+
+  @HostListener('window:focus') onFocus(): void { this.isTabActive = true; }
+  @HostListener('window:blur') onBlur(): void { this.isTabActive = false; }
 
   constructor(public errorHelper: ErrorHelper,
               public modalService: NgbModal) {
@@ -32,7 +43,26 @@ export class DefaultTableComponent {
   /**
    * @description Optional filters
    */
-  public filterOptions: any = {};
+  public filterOptions: IFilterOptions = {};
+
+  /**
+   * @description Initializes the core functions
+   */
+  init(): void {
+    this.loadData();
+    this.loadPreferences();
+    this.refreshInterval();
+
+    // assign the value for autoRefresh if present
+    if (this.filterOptions.autoRefresh) {
+      this.autoRefresh = this.filterOptions.autoRefresh.value;
+    }
+
+    // assign the value for allowBackgroundRefresh if present
+    if (this.filterOptions.backgroundRefresh) {
+      this.allowBackgroundRefresh = this.filterOptions.backgroundRefresh.value;
+    }
+  }
 
   /**
    * @description Loads data
@@ -49,12 +79,16 @@ export class DefaultTableComponent {
     if (preferences) {
 
       // assign the new values
-      this.filterOptions = preferences.filterOptions;
-      preferences.filters.forEach(filter => {
-        const filterIndex = this.filters.findIndex(obj => obj.id === filter.id);
-        this.filters[filterIndex].order = filter.order;
-        this.filters[filterIndex].checked = filter.checked;
-      });
+      this.filterOptions = Object.keys(this.filterOptions).length !== Object.keys(preferences.filterOptions).length ?
+        this.filterOptions : preferences.filterOptions;
+
+      if (Object.keys(preferences.filters).length === Object.keys(this.filters).length) {
+        preferences.filters.forEach(filter => {
+          const filterIndex = this.filters.findIndex(obj => obj.id === filter.id);
+          this.filters[filterIndex].order = filter.order;
+          this.filters[filterIndex].checked = filter.checked;
+        });
+      }
 
     }
 
@@ -176,4 +210,23 @@ export class DefaultTableComponent {
       this.addFilter(filter.id);
     });
   }
+
+  /**
+   * @description Refresh function
+   */
+  refresh(): void {
+    this.loadData();
+  }
+
+  /**
+   * @description Sets an Interval for data refresh
+   */
+  refreshInterval(): void {
+    setInterval(() => {
+      if (this.autoRefresh && (this.allowBackgroundRefresh || this.isTabActive)) {
+        this.loadData();
+      }
+    }, this.refreshTimeout);
+  }
+
 }

@@ -1,6 +1,6 @@
 <div class="modal-header">
   <h3>{{ 'TABLE_PREF_TITLE' | translate }}</h3>
-  <button class="close" aria-label="Close" (click)="closeModal()">
+  <button class="close" aria-label="Close" tabindex="-1" (click)="closeModal()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
@@ -12,24 +12,35 @@
 
     <div class="row align-items-center">
 
-      <!-- switches -->
+      <!-- Switches -->
       <div *ngFor="let checkbox of FOCheckbox"
-           class="pretty p-switch p-fill col-sm-6 py-2 mr-0">
+           class="switch group form-group d-flex col py-2">
         <input
-          [id]="checkbox.id"
-          [name]="checkbox.id"
+          id="{{checkbox.id}}"
+          name="{{checkbox.id}}"
           type="checkbox"
+          class="switch-input"
           [checked]="checkbox.value"
           (change)="checkboxOnChange(checkbox.value, checkbox.id)">
-        <div class="state">
-          <label>{{checkbox.title}}</label>
-        </div>
+        <label
+          for="{{checkbox.id}}"
+          class="switch-label position-relative d-flex flex-column">
+          {{checkbox.title}}
+        </label>
       </div>
 
-      <!-- selects -->
+      <!-- Selects -->
       <div *ngFor="let select of FOSelect"
-           class="col-sm-6 d-flex py-2 form-group group flex-column">
-        <label for="{{select.id}}" class="mr-2">{{select.title}}</label>
+           class="col-sm-12 d-flex py-2 form-group group flex-column">
+        <label for="{{select.id}}" class="mr-2">
+          {{select.title}}
+          <!-- TODO: fix z-index issue with tooltip inside modal -->
+          <!--<span-->
+            <!--*ngIf="select.options.hint.show"-->
+            <!--nbTooltip="{{select.options.hint.text}}"-->
+            <!--class="icon ion-ios-help-outline position-relative">-->
+          <!--</span>-->
+        </label>
         <select
           [name]="select.id"
           id="{{select.id}}"
@@ -48,23 +59,33 @@
 
   </form>
 
+  <hr>
+
   <section id="columns-section">
 
     <header><h5>{{ 'COLUMNS' | translate }}</h5></header>
 
     <div class="row" [sortablejs]="filters" [sortablejsOptions]="sortableOptions">
+
       <!-- Rows -->
-      <div class="pretty p-icon p-smooth d-flex align-items-center col-sm-12" *ngFor="let filter of filters">
+      <div class="d-flex align-items-center col-sm-12 py-2" *ngFor="let filter of filters">
         <input
+          class="inp-cbx"
+          style="display: none;"
           id="{{filter.id}}"
           name="{{filter.id}}"
           type="checkbox"
           [checked]="filter.checked"
           (click)="selectFilter(filter.id)">
-        <div class="state p-info flex-grow-1">
-          <label for="{{filter.id}}" class="position-relative">{{filter.title}}</label>
-        </div>
-        <span class="icon ion-ios-menu fs-larger"></span>
+        <label class="cbx d-flex align-items-center col-sm-12" for="{{filter.id}}">
+        <span>
+          <svg width="12px" height="10px" viewbox="0 0 12 10">
+            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+          </svg>
+        </span>
+          <span class="col">{{filter.title}}</span>
+          <span class="icon ion-ios-menu fs-larger"></span>
+        </label>
       </div>
     </div>
 

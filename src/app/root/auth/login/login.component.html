@@ -17,9 +17,23 @@
       </div>
       <div class="links d-flex justify-content-between align-items-center my-2">
         <div class="form-group group d-flex align-items-center m-0">
-          <input id="rememberMe" name="rememberMe" nbinput formControlName="rememberMe" type="checkbox" ng-reflect-name="rememberMe" class="ng-dirty ng-valid ng-touched m-0">
-          <label for="rememberMe" class="non-order m-0 ml-2">{{ 'REMEMBER_ME' | translate }}</label>
+          <input
+            class="inp-cbx"
+            style="display: none;"
+            id="rememberMe"
+            formControlName="rememberMe"
+            name="rememberMe"
+            type="checkbox">
+          <label class="cbx d-flex align-items-center" for="rememberMe">
+            <span>
+              <svg width="12px" height="10px" viewbox="0 0 12 10">
+                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+              </svg>
+            </span>
+            <span class="col">{{ 'REMEMBER_ME' | translate }}</span>
+          </label>
         </div>
+
         <small class="form-text">
           <a routerLink="/auth/request/credentials">{{ 'FORGOTTEN_CREDS' | translate }}?</a>
         </small>

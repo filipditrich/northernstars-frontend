@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { translate, ErrorHelper } from '../../../helpers';
+import { ErrorHelper, translate } from '../../../helpers';
+import { FilterOptionType, IFilterOption } from '../../../models/table.model';
 
 @Component({
   selector: 'ngx-match-table-preferences',
@@ -14,8 +15,8 @@ export class TablePreferencesComponent implements OnInit {
   @Input() storagePrefName: string;
 
   // public variables
-  public FOCheckbox: any[] = [];
-  public FOSelect: any[] = [];
+  public FOCheckbox: IFilterOption[] = [];
+  public FOSelect: IFilterOption[] = [];
   public sortableOptions = {
     onUpdate: event => this.onUpdate(event),
   };
@@ -29,9 +30,9 @@ export class TablePreferencesComponent implements OnInit {
    */
   ngOnInit(): void {
     this.sortList();
-    const filterOptions: any[] = Object.values(this.filterOptions);
-    this.FOCheckbox = filterOptions.filter(filter => filter.type === 'checkbox');
-    this.FOSelect = filterOptions.filter(filter => filter.type === 'select');
+    const filterOptions: IFilterOption[] = Object.values(this.filterOptions);
+    this.FOCheckbox = filterOptions.filter(filter => filter.type === FilterOptionType.Checkbox);
+    this.FOSelect = filterOptions.filter(filter => filter.type === FilterOptionType.Select);
   }
 
   /**

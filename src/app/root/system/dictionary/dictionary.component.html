@@ -12,8 +12,8 @@
               <!-- Heading -->
               <h2
                 *ngIf="!isSearch"
-                class="m-0 pl-0 col d-flex align-items-center">
-                {{ 'DICTIONARY_MANAGER' | translate }}
+                class="m-0 pl-0 col d-flex align-items-center"
+                [innerText]="isFilter ? translate('RESULTS_FOR', { value: search.value }) : translate('DICT_MGR')">
               </h2>
 
               <!-- Action Button -->
@@ -42,7 +42,8 @@
                       placeholder="{{ 'SEARCH' | translate }}"
                       class="input-full-width input-md"
                       formControlName="search"
-                      (keyup)="onSearch([ 'id', 'cs', 'en' ], search.value, null)">
+                      (keyup)="onSearch([ 'id', 'cs', 'en' ], search.value, null)"
+                      (blur)="isSearch = false">
 
                     <div class="buttons">
 

@@ -21,8 +21,10 @@ export class DefaultTableComponent {
   public isTabActive: boolean = true;
   public refreshTimeout: number = 60000;
 
-  public isSearch = false;
+  public isSearch: boolean = false;
+  public isFilter: boolean = false;
   public searchForm: FormGroup;
+  public translate: Function = translate;
 
   public storagePrefName: string = 'defaultTable';
   public source: LocalDataSource;
@@ -253,10 +255,22 @@ export class DefaultTableComponent {
    */
   onSearch(fields: string[], search: string, filter: Function | null): void {
     const conf: { field: string, search: string, filter: Function | null }[] = [];
+
+    // create filters
     for (const field of fields) {
       conf.push({ field, search, filter });
     }
+
+    // set the filters
     this.source.setFilter(conf, false);
+    this.isFilter = true;
+
+    // manually remove filters if the value is empty
+    if (!search) {
+      this.source.setFilter([]);
+      this.isFilter = false;
+    }
+
   }
 
 }

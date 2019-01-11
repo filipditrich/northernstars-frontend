@@ -1,4 +1,5 @@
 import { HostListener } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { LocalDataSource } from 'ng2-smart-table-extended';
 import { IFilterOptions } from '../../models/table.model';
 import { DefaultModalComponent } from '../modals/default-modal.component';
@@ -20,6 +21,9 @@ export class DefaultTableComponent {
   public isTabActive: boolean = true;
   public refreshTimeout: number = 60000;
 
+  public isSearch = false;
+  public searchForm: FormGroup;
+
   public storagePrefName: string = 'defaultTable';
   public source: LocalDataSource;
 
@@ -29,7 +33,16 @@ export class DefaultTableComponent {
   constructor(public errorHelper: ErrorHelper,
               public modalService: NgbModal) {
 
+
+    // Search Form
+    this.searchForm = new FormGroup({
+      search: new FormControl(null, []),
+    });
+
   }
+
+  // Getters
+  get search() { return this.searchForm.get('search'); }
 
   /**
    * @description Table Settings
@@ -230,6 +243,20 @@ export class DefaultTableComponent {
         this.loadData();
       }
     }, this.refreshTimeout);
+  }
+
+  /**
+   * @description Handler for onSearch event
+   * @param fields
+   * @param search
+   * @param filter
+   */
+  onSearch(fields: string[], search: string, filter: Function | null): void {
+    const conf: { field: string, search: string, filter: Function | null }[] = [];
+    for (const field of fields) {
+      conf.push({ field, search, filter });
+    }
+    this.source.setFilter(conf, false);
   }
 
 }

@@ -8,8 +8,13 @@
           <!-- Table Head -->
           <thead>
             <div class="stc-head d-flex justify-content-end align-items-stretch">
+
               <!-- Heading -->
-              <h2 class="m-0 pl-0 col d-flex align-items-center">{{ 'DICTIONARY_MANAGER' | translate }}</h2>
+              <h2
+                *ngIf="!isSearch"
+                class="m-0 pl-0 col d-flex align-items-center">
+                {{ 'DICTIONARY_MANAGER' | translate }}
+              </h2>
 
               <!-- Action Button -->
               <button
@@ -17,6 +22,46 @@
                 class="btn btn-primary mx-2 fs-larger">
                 {{ 'ADD_RECORD' | translate }}
               </button>
+
+              <!-- Search Button -->
+              <div class="form d-flex align-items-stretch mx-2"
+                   [ngClass]="{ 'w-100' : isSearch }" [formGroup]="searchForm">
+                <div class="form-group group m-0 d-flex align-items-stretch w-100">
+                  <div class="input-with-buttons append borders-2 w-100">
+
+                    <!-- Search Input -->
+                    <input
+                      id="search"
+                      name="search"
+                      type="search"
+                      [ngStyle]="{
+                        'padding': !isSearch ? 0 : '0 1.125rem',
+                        'width': !isSearch ? 0 : 'auto',
+                        'border-width': !isSearch ? 0 : '2px'
+                      }"
+                      placeholder="{{ 'SEARCH' | translate }}"
+                      class="input-full-width input-md"
+                      formControlName="search"
+                      (keyup)="onSearch([ 'id', 'cs', 'en' ], search.value, null)">
+
+                    <div class="buttons">
+
+                      <!-- Search Button -->
+                      <button
+                        (click)="isSearch = !isSearch"
+                        nbTooltip="{{ 'SEARCH' | translate }}"
+                        [ngStyle]="{
+                          'border-radius': isSearch ? '0 5px 5px 0' : '5px',
+                          'border-left-width': isSearch ? 0 : '2px'
+                        }"
+                        class="btn btn-secondary px-3 py-1">
+                        <i class="icon ion-ios-search cursor-pointer fs-biggest"></i>
+                      </button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <!-- Refresh -->
               <button

@@ -6,7 +6,7 @@ import { DefaultModalComponent, DefaultModalOptions, DefaultTableComponent } fro
 import { ErrorHelper, HumanizerHelper, translate } from '../../../@shared/helpers';
 import { IDict } from '../../../@shared/models';
 import { FilterOptionType } from '../../../@shared/models/table.model';
-import {CreateDictionaryComponent} from './create/create-dictionary.component';
+import { CreateDictionaryComponent } from './create/create-dictionary.component';
 import { DictionaryService } from './dictionary.service';
 
 @Component({
@@ -183,6 +183,7 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
         valuePrepareFunction: value => this.humanizer.date(value),
       },
     ];
+
   }
 
   /**
@@ -221,6 +222,7 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
    * @description Handler for onAdd event
    */
   onAdd(): void {
+    this.isSearch = false;
     this.isModalOpen = true;
     const modal = this.modalService.open(CreateDictionaryComponent, DefaultModalOptions);
     modal.result.then((re: boolean) => {

@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import {HttpClient } from '@angular/common/http';
-import {IUser} from '../../@shared/models';
-import { JwtHelperService} from '@auth0/angular-jwt';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {JwtHelperService} from '@auth0/angular-jwt';
+import {IUser, UserRoles} from '../../@shared/models';
 
 @Injectable({
   providedIn: 'root',
@@ -50,6 +50,26 @@ export class SecurityService {
    */
   static logOut(): void {
     localStorage.removeItem('user');
+  }
+
+  /**
+   * @description Returns if the <user> or logged-in user has Admin role
+   * @param user
+   * @returns {boolean}
+   */
+  static isAdmin(user?: IUser): boolean {
+    const u = user || JSON.parse(localStorage.getItem('user'));
+    return u.roles.indexOf(UserRoles.Admin) >= 0;
+  }
+
+  /**
+   * @description Returns if the <user> or logged-in user has Super role
+   * @param user
+   * @returns {boolean}
+   */
+  static isSuper(user?: IUser): boolean {
+    const u = user || JSON.parse(localStorage.getItem('user'));
+    return u.roles.indexOf(UserRoles.Super) >= 0;
   }
 
 }

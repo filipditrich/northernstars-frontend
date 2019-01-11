@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormGroup } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Toast, ToasterService } from 'angular2-toaster';
-import { translate } from '../../helpers';
+import { translate, focusField } from '../../helpers';
 
 @Component({
   selector: 'ngx-default-create-modal',
@@ -12,6 +12,7 @@ export class DefaultCreateModalComponent {
 
   public form: FormGroup;
   public isLoading: boolean;
+  public focusField: Function = focusField;
 
   constructor(public toaster: ToasterService,
               public activeModal: NgbActiveModal) {

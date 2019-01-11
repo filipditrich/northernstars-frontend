@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToasterService } from 'angular2-toaster';
 import { LocalDataSource } from 'ng2-smart-table-extended';
-import { DefaultModalComponent, DefaultModalOptions, DefaultTableComponent } from '../../../@shared/components';
+import { DefaultModalComponent, defaultModalOptions, DefaultTableComponent } from '../../../@shared/components';
 import { ErrorHelper, HumanizerHelper, translate } from '../../../@shared/helpers';
 import { IDict } from '../../../@shared/models';
 import { FilterOptionType } from '../../../@shared/models/table.model';
 import { CreateDictionaryComponent } from './create/create-dictionary.component';
 import { DictionaryService } from './dictionary.service';
+import { EditDictionaryComponent } from './edit/edit-dictionary.component';
 
 @Component({
   selector: 'ngx-system-dictionary',
@@ -224,7 +225,24 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
   onAdd(): void {
     this.isSearch = false;
     this.isModalOpen = true;
-    const modal = this.modalService.open(CreateDictionaryComponent, DefaultModalOptions);
+    const modal = this.modalService.open(CreateDictionaryComponent, defaultModalOptions());
+
+    modal.result.then((re: boolean) => {
+      if (re) this.refresh();
+      this.isModalOpen = false;
+    });
+  }
+
+  /**
+   * @description Handler for onEdit event
+   * @param event
+   */
+  onEdit(event: any): void {
+    this.isSearch = false;
+    this.isModalOpen = true;
+    const modal = this.modalService.open(EditDictionaryComponent, defaultModalOptions({ size: 'lg' }));
+
+    modal.componentInstance.dictionary = event.data;
     modal.result.then((re: boolean) => {
       if (re) this.refresh();
       this.isModalOpen = false;
@@ -237,7 +255,7 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
    */
   onDelete(event: any): void {
     this.isModalOpen = true;
-    const modal = this.modalService.open(DefaultModalComponent, DefaultModalOptions);
+    const modal = this.modalService.open(DefaultModalComponent, defaultModalOptions());
 
     modal.componentInstance.modalHeader = translate('DELETE_CONFIRM_TITLE');
     modal.componentInstance.modalContent = translate('DELETE_CONFIRM_MSG');

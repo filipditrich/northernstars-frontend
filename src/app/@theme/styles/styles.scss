@@ -17,6 +17,10 @@
 @import './custom/font-size';
 @import './custom/checkboxes';
 
+// ng-pick-datetime
+@import '~ng-pick-datetime/assets/style/picker.min.css';
+.cdk-overlay-container { z-index: 9999999 !important; }
+
 // loading progress bar theme
 @import './pace.theme';
 

@@ -8,3 +8,4 @@ export * from './error.helper';
 export * from './general.helper';
 export * from './humanizer.helper';
 export * from './validator.helper';
+export * from './form.helper';

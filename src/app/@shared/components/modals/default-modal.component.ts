@@ -29,8 +29,24 @@ export class DefaultModalComponent {
   }
 }
 
-export const DefaultModalOptions: NgbModalOptions = {
-  container: 'nb-layout',
-  keyboard: false,
-  backdrop: 'static',
-};
+/**
+ * @description Returns default modal options modified with optional input <opts>
+ * @param opts
+ * @returns {NgbModalOptions}
+ */
+export function defaultModalOptions(opts?: NgbModalOptions): NgbModalOptions {
+
+  // default options
+  const options: NgbModalOptions = {
+    container: 'nb-layout',
+    keyboard: false,
+    backdrop: 'static',
+  };
+
+  // assign inputted values
+  for (const opt of opts ? Object.keys(opts) : []) {
+    options[opt] = opts[opt];
+  }
+
+  return options;
+}

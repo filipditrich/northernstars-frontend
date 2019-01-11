@@ -6,7 +6,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToasterModule } from 'angular2-toaster';
+import {OWL_DATE_TIME_LOCALE, OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
 import { Ng2SmartTableExtendedModule } from 'ng2-smart-table-extended';
+import {environment} from '../environments/environment';
 import { CoreModule } from './@core/core.module';
 import { GlobalErrorHandler } from './@core/services/error-handler.service';
 import { HttpHeadersInterceptor } from './@core/services/http–interceptor.service';
@@ -37,6 +39,8 @@ export function PreloadInitializerProviderFactory(provider: PreloadInitializer) 
     ToasterModule.forRoot(),
     SortablejsModule.forRoot({ animation: 150 }),
     Ng2SmartTableExtendedModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
   ],
   declarations: [
     AppComponent,
@@ -55,6 +59,8 @@ export function PreloadInitializerProviderFactory(provider: PreloadInitializer) 
       multi: true },
     { provide: ErrorHandler,
       useClass: GlobalErrorHandler },
+    { provide: OWL_DATE_TIME_LOCALE,
+      useValue: environment.language },
   ],
 })
 export class AppModule { }

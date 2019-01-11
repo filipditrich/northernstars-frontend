@@ -69,6 +69,7 @@
     "leaflet": "1.2.0",
     "moment": "^2.23.0",
     "nebular-icons": "1.1.0",
+    "ng-pick-datetime": "^7.0.0",
     "ng2-ckeditor": "^1.2.2",
     "ng2-completer": "2.0.8",
     "ng2-smart-table-extended": "file:ng2-smart-table-extended-demo/dist/ng2-smart-table-extended",

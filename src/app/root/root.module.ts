@@ -1,6 +1,7 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { NbAuthModule } from '@nebular/auth';
+import {OwlDateTimeModule, OwlNativeDateTimeModule} from 'ng-pick-datetime';
 import { Ng2SmartTableExtendedModule } from 'ng2-smart-table-extended';
 import { AuthGuard, PreventLogged, RoleGuard } from '../@core/guards';
 import { HttpHeadersInterceptor } from '../@core/services/http–interceptor.service';
@@ -18,6 +19,8 @@ import { RootComponent } from './root.component';
     SharedModule,
     NbAuthModule,
     Ng2SmartTableExtendedModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
   ],
   declarations: [
     RootComponent,

@@ -56,7 +56,7 @@
                           'border-left-width': isSearch ? 0 : '2px'
                         }"
                         class="btn btn-secondary px-3 py-1">
-                        <i class="icon ion-ios-search cursor-pointer fs-biggest"></i>
+                        <i class="icon ion-ios-search fs-biggest"></i>
                       </button>
 
                     </div>
@@ -70,7 +70,7 @@
                 [ngClass]="{ 'pointer-events-none': isLoading }"
                 nbTooltip="{{ 'RELOAD' | translate }}"
                 class="btn btn-secondary mx-2 px-3 py-1">
-                <i class="icon ion-ios-refresh-empty cursor-pointer fs-large"></i>
+                <i class="icon ion-ios-refresh-empty fs-large"></i>
               </button>
 
               <!-- Table Preferences -->
@@ -78,7 +78,7 @@
                 (click)="openPreferences()"
                 nbTooltip="{{ 'OPEN_PREFERENCES' | translate }}"
                 class="btn btn-secondary mx-2 px-3 py-1">
-                <i class="icon ion-ios-cog-outline cursor-pointer fs-large"></i>
+                <i class="icon ion-ios-cog-outline fs-large"></i>
               </button>
             </div>
           </thead>
@@ -88,6 +88,7 @@
             <ng2-smart-table-extended
               [settings]="settings"
               [source]="source"
+              (edit)="onEdit($event)"
               (delete)="onDelete($event)">
             </ng2-smart-table-extended>
           </tbody>

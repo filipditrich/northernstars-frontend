@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {NbTooltipModule} from '@nebular/theme';
+import { NbTooltipModule } from '@nebular/theme';
 import { SortablejsModule } from 'angular-sortablejs';
-import {DefaultCreateModalComponent} from './components/modals/default-create-modal.component';
-import { DefaultModalComponent } from './components/modals/default-modal.component';
+import { DefaultCreateModalComponent, DefaultEditModalComponent, DefaultModalComponent } from './components';
 import { SysInfoPipe, TranslatePipe, LocalDatePipe } from './pipes';
 import { ErrorHelper, HumanizerHelper } from './helpers';
 import { TablePreferencesComponent, EPlayersRendererComponent } from './components/tables';
+import { UsersService } from './services';
 
 @NgModule({
   imports: [
@@ -22,16 +22,19 @@ import { TablePreferencesComponent, EPlayersRendererComponent } from './componen
     EPlayersRendererComponent,
     DefaultModalComponent,
     DefaultCreateModalComponent,
+    DefaultEditModalComponent,
   ],
   entryComponents: [
     EPlayersRendererComponent,
     DefaultModalComponent,
     TablePreferencesComponent,
     DefaultCreateModalComponent,
+    DefaultEditModalComponent,
   ],
   providers: [
     HumanizerHelper,
     ErrorHelper,
+    UsersService,
   ],
   exports: [
     TranslatePipe,
@@ -39,6 +42,7 @@ import { TablePreferencesComponent, EPlayersRendererComponent } from './componen
     LocalDatePipe,
     DefaultModalComponent,
     DefaultCreateModalComponent,
+    DefaultEditModalComponent,
     TablePreferencesComponent,
     EPlayersRendererComponent,
   ],

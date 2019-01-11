@@ -2,11 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37736097-b0e7-461a-8af7-0d79ae7465de" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/components/modals/default-edit-modal.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/helpers/form.helper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@shared/services/users.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ng2-smart-table-extended-demo" beforeDir="false" afterPath="$PROJECT_DIR$/ng2-smart-table-extended-demo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ng2-smart-table-extended-demo/dist/ng2-smart-table-extended/bundles/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/ng2-smart-table-extended-demo/dist/ng2-smart-table-extended/bundles/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@shared/components/tables/default-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/components/tables/default-table.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/services/security.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/services/security.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@shared/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@shared/components/modals/default-create-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/components/modals/default-create-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@shared/components/modals/default-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/components/modals/default-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@shared/helpers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/helpers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@shared/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/styles/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/root/root.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/root/root.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/root/system/system.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/root/system/system.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/root/system/system.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/root/system/system.module.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +43,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+            <state relative-caret-position="481">
+              <caret line="257" column="55" selection-start-line="257" selection-start-column="55" selection-end-line="257" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/@shared/components/modals/default-modal.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -45,21 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>flex-grow_1</find>
-      <find>fle</find>
-      <find>bootstrap-grid</find>
-      <find>.flex-grow</find>
-      <find>color_</find>
-      <find>#cbx</find>
-      <find>&amp;:before</find>
-      <find>&quot;&quot;</find>
-      <find>font_0</find>
-      <find>font_1</find>
-      <find>_approx</find>
-      <find>btn-can</find>
-      <find>rowsPerPage</find>
-      <find>settings</find>
-      <find>default</find>
       <find>.tooltip</find>
       <find>.tooltip {</find>
       <find>ioni</find>
@@ -75,6 +93,21 @@
       <find>DICTIO</find>
       <find>DICTI</find>
       <find>import { $</find>
+      <find>-cur</find>
+      <find>cursor-pointer</find>
+      <find>.toPromise</find>
+      <find>DefaultModalOp</find>
+      <find>Defa</find>
+      <find>max</find>
+      <find>min</find>
+      <find>date.</find>
+      <find>.value</find>
+      <find>match</find>
+      <find>this.input</find>
+      <find>createdBy</find>
+      <find>.createdBy</find>
+      <find>input[field]</find>
+      <find>valid ?</find>
     </findStrings>
     <replaceStrings>
       <replace>from './</replace>
@@ -90,6 +123,8 @@
       <replace>en.</replace>
       <replace>'</replace>
       <replace>import { $1 }</replace>
+      <replace>[field]</replace>
+      <replace>input</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/app</dir>
@@ -106,57 +141,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/root/home/index.ts" />
-        <option value="$PROJECT_DIR$/src/app/@shared/components/idex.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/auth/requests/credentials/credentials-request.component.html" />
-        <option value="$PROJECT_DIR$/src/.htaccess" />
-        <option value="$PROJECT_DIR$/src/app/app.routing.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/auth/login/login.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/auth/auth.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/auth/auth.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/system/system.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/system/system.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/system/info/system-info.component.ts" />
         <option value="$PROJECT_DIR$/src/app/root/system/index.ts" />
         <option value="$PROJECT_DIR$/src/app/root/root.routing.ts" />
         <option value="$PROJECT_DIR$/src/app/@shared/models/user.model.ts" />
-        <option value="$PROJECT_DIR$/src/app/@core/services/security.service.ts" />
         <option value="$PROJECT_DIR$/src/app/@core/guards/access.guard.ts" />
         <option value="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.scss" />
         <option value="$PROJECT_DIR$/src/app/@shared/models/config.model.ts" />
         <option value="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/root.module.ts" />
         <option value="$PROJECT_DIR$/src/app/@theme/styles/custom/_smart-table.scss" />
         <option value="$PROJECT_DIR$/src/app/@theme/styles/custom/_font-size.scss" />
         <option value="$PROJECT_DIR$/node_modules/@nebular/theme/styles/prebuilt/default.css" />
         <option value="$PROJECT_DIR$/node_modules/@nebular/theme/styles/global/tables/_smart-table.theme.scss" />
-        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/@theme/components/header/header.component.ts" />
         <option value="$PROJECT_DIR$/src/app/@theme/components/header/header.component.html" />
         <option value="$PROJECT_DIR$/src/app/@theme/styles/custom/_variables.scss" />
-        <option value="$PROJECT_DIR$/src/app/@theme/styles/styles.scss" />
         <option value="$PROJECT_DIR$/src/app/root/auth/login/login.component.html" />
         <option value="$PROJECT_DIR$/src/app/@shared/components/tables/table-preferences/table-preferences.component.ts" />
         <option value="$PROJECT_DIR$/src/app/@theme/styles/custom/_checkboxes.scss" />
         <option value="$PROJECT_DIR$/src/app/@shared/models/table.model.ts" />
         <option value="$PROJECT_DIR$/src/app/@shared/components/tables/table-preferences/table-preferences.component.html" />
         <option value="$PROJECT_DIR$/src/app/root/root-menu.ts" />
-        <option value="$PROJECT_DIR$/src/app/@shared/components/index.ts" />
-        <option value="$PROJECT_DIR$/src/app/@shared/components/modals/default-modal.component.ts" />
         <option value="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.scss" />
-        <option value="$PROJECT_DIR$/src/app/root/system/system.module.ts" />
         <option value="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.service.spec.ts" />
         <option value="$PROJECT_DIR$/src/app/@shared/helpers/validator.helper.ts" />
-        <option value="$PROJECT_DIR$/src/app/@shared/shared.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/@shared/components/modals/default-create-modal.component.ts" />
         <option value="$PROJECT_DIR$/src/app/@shared/helpers/translator.helper.ts" />
-        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.html" />
-        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.ts" />
         <option value="$PROJECT_DIR$/src/app/@theme/styles/custom/_forms.scss" />
-        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.ts" />
         <option value="$PROJECT_DIR$/src/app/root/system/system.routing.ts" />
         <option value="$PROJECT_DIR$/src/app/@shared/components/tables/default-table.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/components/modals/default-edit-modal.ts" />
+        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.html" />
         <option value="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.html" />
+        <option value="$PROJECT_DIR$/src/app/root/root.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/@theme/styles/styles.scss" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/services/users.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/helpers/sysinfo.helper.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/models/general.model.ts" />
+        <option value="$PROJECT_DIR$/src/app/@core/services/security.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.html" />
+        <option value="$PROJECT_DIR$/src/app/@shared/helpers/form.helper.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/helpers/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/components/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/services/index.ts" />
+        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/components/modals/default-edit-modal.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/components/modals/default-create-modal.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/shared.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/root/system/system.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/@shared/components/modals/default-modal.component.ts" />
       </list>
     </option>
   </component>
@@ -290,18 +325,18 @@
       <workItem from="1546000427975" duration="10000" />
       <workItem from="1546554899992" duration="3490000" />
       <workItem from="1546561851775" duration="1005000" />
-      <workItem from="1546732689776" duration="80436000" />
+      <workItem from="1546732689776" duration="90130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92984000" />
+    <option name="totallyTimeSpent" value="102678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-159" y="-900" width="1600" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925262" visible="true" weight="0.20709309" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49925262" visible="true" weight="0.20709309" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5007474" side_tool="true" weight="0.15326156" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -313,7 +348,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="8" weight="0.32846716" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.24939173" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.16423358" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -345,214 +380,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/@theme/styles/custom/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@theme/styles/custom/_font-size.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@theme/styles/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@angular/core/src/metadata/directives.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="821" column="4" selection-start-line="821" selection-start-column="4" selection-end-line="821" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/root.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/auth/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#form#0;n#nb-auth-block#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng2-smart-table-extended-demo/dist/ng2-smart-table-extended/ng2-smart-table-extended.module.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng2-smart-table-extended-demo/dist/ng2-smart-table-extended/lib/data-set/cell.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng2-smart-table-extended-demo/dist/ng2-smart-table-extended/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng2-smart-table-extended-demo/dist/ng2-smart-table-extended/lib/data-set/column.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng2-smart-table-extended-demo/dist/ng2-smart-table-extended/bundles/table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@nebular/theme/components/cdk/overlay/overlay-position.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@nebular/theme/components/tooltip/tooltip.component.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/_tooltip.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/tables/table-preferences/table-preferences.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@theme/styles/custom/_checkboxes.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@theme/styles/themes.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="19" column="67" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/table.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="67" column="9" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/root-menu.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/config.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@ng-bootstrap/ng-bootstrap/modal/modal-config.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/tables/table-preferences/table-preferences.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#section#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/modals/default-modal.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/system/system.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@angular/core/testing/src/testing.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@angular/core/testing/public_api.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -620,16 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@shared/shared.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/root/auth/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
@@ -647,33 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding>
-            <element signature="e#184#191#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/modals/default-create-modal.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/@theme/styles/custom/_forms.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -685,19 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1258">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-            <element signature="e#1309#2417#0" />
-            <element signature="e#2439#3099#0" />
-            <element signature="e#3120#5686#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,10 +495,280 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="107" column="6" lean-forward="true" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
+          <folding>
+            <element signature="e#184#191#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/config.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@core/data/users.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/auth/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/system.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/ng-pick-datetime/assets/style/picker.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/angular-sortablejs/dist/src/sortablejs.module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/core/src/metadata/ng_module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/angular2-toaster/src/toaster.module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@core/core.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="89" column="9" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@theme/theme.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="164" column="9" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/root.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@theme/styles/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="63" column="4" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/helpers/sysinfo.helper.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/models/general.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@core/services/security.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="109" column="55" lean-forward="true" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/helpers/form.helper.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/helpers/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/pipes/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/modals/default-create-modal.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/modals/default-edit-modal.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/services/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/services/users.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/shared.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/system.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/edit/edit-dictionary.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="41" lean-forward="true" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/create/create-dictionary.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/root/system/dictionary/dictionary.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="257" column="55" selection-start-line="257" selection-start-column="55" selection-end-line="257" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/@shared/components/modals/default-modal.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
         </state>
       </provider>
     </entry>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToasterService } from 'angular2-toaster';
-import { DefaultCreateModalComponent } from '../../../../@shared/components/modals/default-create-modal.component';
+import { DefaultCreateModalComponent } from '../../../../@shared/components';
 import { ErrorHelper, HumanizerHelper, isUpperCase } from '../../../../@shared/helpers';
 import { IDict } from '../../../../@shared/models';
 import { DictionaryService } from '../dictionary.service';
@@ -45,7 +45,7 @@ export class CreateDictionaryComponent extends DefaultCreateModalComponent imple
   }
 
   /**
-   * @description Calls the service with creation request
+   * @description Calls the service with create request
    * @param dict
    */
   create(dict: IDict): void {

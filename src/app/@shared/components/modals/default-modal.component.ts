@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {AfterViewChecked, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input} from '@angular/core';
 import {NgbActiveModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -15,17 +15,23 @@ import {NgbActiveModal, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
       <button *ngFor="let button of modalButtons" class="btn btn-md {{button.classes}} my-1" (click)="button.action()">{{button.text}}</button>
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DefaultModalComponent {
+export class DefaultModalComponent implements AfterViewChecked {
 
   @Input() modalHeader: string;
   @Input() modalContent: string;
   @Input() modalButtons = [];
 
-  constructor(private activeModal: NgbActiveModal) { }
+  constructor(private activeModal: NgbActiveModal,
+              private ref: ChangeDetectorRef) { }
 
-  closeModal() {
+  closeModal(): void {
     this.activeModal.close(false);
+  }
+
+  ngAfterViewChecked(): void {
+    this.ref.detectChanges();
   }
 }
 

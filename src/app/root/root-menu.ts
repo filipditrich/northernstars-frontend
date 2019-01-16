@@ -8,14 +8,25 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'User',
+    icon: 'icon ion-ios-person',
+    link: '/user',
+    children: [
+      {
+        title: 'Profile',
+        link: '/user/profile',
+      },
+    ],
+  },
+  {
     title: 'System',
     icon: 'icon ion-bug',
     link: '/system',
     children: [
-      // {
-      //   title: 'Info',
-      //   link: '/system/info',
-      // },
+      {
+        title: 'Info',
+        link: '/system/info',
+      },
       {
         title: 'Dictionary',
         link: '/system/dictionary',

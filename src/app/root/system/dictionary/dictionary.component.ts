@@ -72,6 +72,7 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
       },
     };
     this.settings = {
+      // selectMode: 'multi',
       edit: {
         editButtonContent: `<i class="icon ion-ios-color-wand fs-large px-3"></i>`,
         editClassFunction: row => '',
@@ -89,7 +90,33 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
         edit: true,
         delete: true,
       },
-      rowClassFunction: row => '',
+      // contextMenu: {
+      //   show: true,
+      //   items: [
+      //     {
+      //       type: 'html',
+      //       value: `<span class="fs-normal d-flex align-items-center"><i class="icon ion-ios-help-outline fs-large mr-2"></i>${translate('DETAILS')}</span>`,
+      //       action: (row: any) => {
+      //         alert(`This would show detail for the following: ${row.data.id}`);
+      //       },
+      //     },
+      //     {
+      //       type: 'html',
+      //       value: `<span class="fs-normal d-flex align-items-center"><i class="icon ion-ios-color-wand fs-large mr-2"></i>${translate('EDIT')}</span>`,
+      //       action: (row: any) => {
+      //         this.onEdit(row);
+      //       },
+      //     },
+      //     {
+      //       type: 'html',
+      //       value: `<span class="text-danger fs-normal d-flex align-items-center"><i class="icon ion-ios-trash fs-large mr-2"></i>${translate('DELETE')}</span>`,
+      //       action: (row: any) => {
+      //         alert(`This would delete the following: ${row.data.id}`);
+      //       },
+      //     },
+      //   ],
+      // },
+      rowClassFunction: row => { this.onDelete(row); },
       columns: {},
       pager: {
         perPage: this.filterOptions.rowsPerPage.value,
@@ -118,7 +145,7 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
           return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }) * dir;
         },
         valuePrepareFunction: value => {
-          if (value.length > 24) { value = value.substring(32, 0) + '...'; }
+          if (value.length > 24) { value = value.substring(21, 0) + '...'; }
           return value;
         },
       },
@@ -133,7 +160,7 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
           return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }) * dir;
         },
         valuePrepareFunction: value => {
-          if (value.length > 32) { value = value.substring(32, 0) + '...'; }
+          if (value.length > 24) { value = value.substring(21, 0) + '...'; }
           return value;
         },
       },
@@ -253,28 +280,29 @@ export class DictionaryComponent extends DefaultTableComponent implements OnInit
    * @description Handler for onDelete event
    * @param event
    */
+  // TODO: What the fuck. Why does this now throw ExpressionChangedAfterItHasBeenCheckedError ????
   onDelete(event: any): void {
-    this.isModalOpen = true;
-    const modal = this.modalService.open(DefaultModalComponent, defaultModalOptions());
-
-    modal.componentInstance.modalHeader = translate('DELETE_CONFIRM_TITLE');
-    modal.componentInstance.modalContent = translate('DELETE_CONFIRM_MSG');
-    modal.componentInstance.modalButtons = [
-      {
-        text: translate('CANCEL'),
-        classes: 'btn-secondary',
-        action: () => { modal.close(false); },
-      },
-      {
-        text: translate('DELETE'),
-        classes: 'btn-danger',
-        action: () => { this.delete(event.data, modal); },
-      },
-    ];
-    modal.result.then((re: boolean) => {
-      if (re) this.refresh();
-      this.isModalOpen = false;
-    });
+    // this.isModalOpen = true;
+    // const modal = this.modalService.open(DefaultModalComponent, defaultModalOptions());
+    //
+    // modal.componentInstance.modalHeader = translate('DELETE_CONFIRM_TITLE');
+    // modal.componentInstance.modalContent = translate('DELETE_CONFIRM_MSG');
+    // modal.componentInstance.modalButtons = [
+    //   {
+    //     text: translate('CANCEL'),
+    //     classes: 'btn-secondary',
+    //     action: () => { modal.close(false); },
+    //   },
+    //   {
+    //     text: translate('DELETE'),
+    //     classes: 'btn-danger',
+    //     action: () => { this.delete(event.data, modal); },
+    //   },
+    // ];
+    // modal.result.then((re: boolean) => {
+    //   if (re) this.refresh();
+    //   this.isModalOpen = false;
+    // });
   }
 
   /**

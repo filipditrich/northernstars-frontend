@@ -9,7 +9,7 @@ import { SystemInfoComponent } from './info/system-info.component';
  */
 const routes: Routes = [
   { path: '', redirectTo: 'info', pathMatch: 'full' },
-  // { path: 'info', component: SystemInfoComponent, data: { title: translate('SYSTEM_INFO') } },
+  { path: 'info', component: SystemInfoComponent, data: { title: translate('SYSTEM_INFO') } },
   { path: 'dictionary', component: DictionaryComponent, data: { title: translate('DICT_MGR') } },
 ];
 

@@ -80,6 +80,8 @@ export class EditDictionaryComponent extends DefaultEditModalComponent implement
    */
   update(dict: IDict): void {
     this.isLoading = true;
+    // force convert id to uppercase
+    dict.id = dict.id.toUpperCase();
     this.dictService.update(this.dictionary.id, dict).subscribe(response => {
       if (response.response.success) {
         this.updateSuccessToaster(dict.id);

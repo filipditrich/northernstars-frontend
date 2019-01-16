@@ -31,7 +31,7 @@
     "docs": "compodoc -p src/tsconfig.app.json -d docs",
     "docs:serve": "compodoc -p src/tsconfig.app.json -d docs -s",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
-    "install:ng2-smart-table-extended": "mkdir ng2-smart-table-extended-demo; cd ng2-smart-table-extended-demo; git init; git remote add -f origin https://github.com/filipditrich/ng2-smart-table-extended.git; git config core.sparseCheckout true; echo \"dist/ng2-smart-table-extended\" >> .git/info/sparse-checkout; git pull --depth=1 origin master; cd ..; npm i ./ng2-smart-table-extended-demo/dist/ng2-smart-table-extended;"
+    "install:ng2-smart-table-extended": "mkdir ng2-smart-table-extended-demo; cd ng2-smart-table-extended-demo; git init; git remote add -f origin https://github.com/filipditrich/ng2-smart-table-extended.git; git config core.sparseCheckout true; echo \"dist/ng2-smart-table-extended\" >> .git/info/sparse-checkout; git pull --depth=1 origin master; cd ./dist/ng2-smart-table-extended/ && npm i tslib --save && cd ../../..; npm i ./ng2-smart-table-extended-demo/dist/ng2-smart-table-extended;"
   },
   "dependencies": {
     "@agm/core": "^1.0.0-beta.5",
@@ -95,7 +95,7 @@
     "@fortawesome/fontawesome-free": "^5.2.0",
     "@types/d3-color": "1.0.5",
     "@types/googlemaps": "^3.30.4",
-    "@types/jasmine": "2.5.54",
+    "@types/jasmine": "xr2.5.54",
     "@types/jasminewd2": "2.0.3",
     "@types/leaflet": "1.2.3",
     "@types/node": "^6.0.90",

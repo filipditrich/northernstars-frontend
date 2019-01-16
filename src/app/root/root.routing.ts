@@ -20,6 +20,7 @@ const routes: Routes = [
         canActivate: [ AuthGuard, RoleGuard ],
         data: { roles: [ UserRoles.Super ] },
       },
+      { path: 'user', loadChildren: 'app/root/user/user.module#UserModule' },
     ],
   },
   { path: 'auth',  loadChildren: 'app/root/auth/auth.module#AuthModule' },
